@@ -4,7 +4,7 @@ describe("empty spec", () => {
   });
 
   it("opens the index page", () => {
-    cy.get("h1").contains("Great coffee with a conscience");
+    cy.get("h1").contains("上海盛永");
   });
 
   it("navigates to the product page", () => {
