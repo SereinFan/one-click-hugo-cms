@@ -1,20 +1,39 @@
 ---
-title: "Great coffee with a conscience"
-subtitle: Support sustainable farming while enjoying a cup
-image: /img/home-jumbotron.jpg
+title: 上海盛永国际贸易有限公司
+subtitle: 宝泉公司中国区独家销售代理 | 引领电池行业技术革新
+image: img/img_topimg4.jpg
 blurb:
-    heading: Why Kaldi?
-    text: "Kaldi is the coffee store for everyone who believes that great coffee shouldn't just taste good, it should do good too. We source all of our beans directly from small scale sustainable farmers and make sure part of the profits are reinvested in their communities."
-intro:
-    heading: "What we offer"
-    text: "Kaldi is the ultimate spot for coffee lovers who want to learn about their java’s origin and support the farmers that grew it. We take coffee production, roasting and brewing seriously and we’re glad to pass that knowledge to anyone."
-products:
-    - image: img/illustrations-coffee.svg
-      text: "We sell green and roasted coffee beans that are sourced directly from independent farmers and farm cooperatives. We’re proud to offer a variety of coffee beans grown with great care for the environment and local communities. Check our post or contact us directly for current availability."
-    - image: /img/illustrations-coffee-gear.svg
-      text: "We offer a small, but carefully curated selection of brewing gear and tools for every taste and experience level. No matter if you roast your own beans or just bought your first french press, you’ll find a gadget to fall in love with in our shop."
-values:
-    heading: Our values
-    text: Coffee is an amazing part of human culture but it has a dark side too – one of colonialism and mindless abuse of natural resources and human lives. We want to turn this around and return the coffee trade to the drink’s exhilarating, empowering and unifying nature.
----
+  heading: 关于我们
+  text: >-
+    上海盛永国际贸易有限公司是宝泉公司在中国区的独家销售代理，专注于将宝泉公司先进的技术、设备和解决方案引入中国市场。我们致力于为研发中心、大学、制造商及各行业客户提供高品质的电池组装设备、研究与测试设备、电池部件与材料等产品，同时提供专业的技术支持与服务。
 
+
+    作为宝泉公司中国区合作伙伴，我们秉承其对环境保护和清洁能源的关注，致力于推动中国电池行业的技术进步与可持续发展。
+
+
+
+    我们的合作伙伴：宝泉公司
+
+    宝泉公司自1993年成立以来，始终活跃于全球电池业务领域。凭借其对环境保护和清洁能源的关注，宝泉公司开发出满足客户需求的创新设备，助力全球电池行业的技术革新。
+intro:
+  heading: 我们的产品与服务
+  text: |-
+    电池组装设备
+    提供高效、精准的电池组装解决方案，满足工业生产需求。
+
+    研究与测试设备
+    支持电池研发与性能测试，助力科研机构与实验室的创新突破。
+
+    电池部件与材料
+    提供高品质的电池部件与材料，确保产品性能与可靠性。
+
+    技术支持与服务
+    专业团队提供全面的技术支持与售后服务，解决客户的技术难题。
+products: []
+values:
+  heading: 为什么选择我们？
+  text: |-
+    全球领先的技术：依托宝泉公司30年的行业经验与创新能力。
+    专业的服务团队：提供定制化解决方案与技术支持。
+    可持续发展的理念：致力于推动清洁能源与环保技术的发展。
+---
