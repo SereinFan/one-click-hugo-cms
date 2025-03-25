@@ -9,20 +9,20 @@ describe("empty spec", () => {
 
   it("navigates to the product page", () => {
     cy.get('a[href="/products"]').eq(0).click();
-    cy.url().should("include", "/products");
-    cy.get("h1").contains(/Our Coffee/i);
+    cy.url().should("include", "/产品");
+    cy.get("h1").contains(/产品/i);
   });
 
   it("navigates to the values page", () => {
     cy.get('a[href="/values"]').eq(0).click();
-    cy.url().should("include", "/values");
-    cy.get("h1").contains(/Values/i);
+    cy.url().should("include", "/公司简介");
+    cy.get("h1").contains(/公司简介/i);
   });
 
   it("navigates to the blog page", () => {
     cy.get('a[href="/post"]').eq(0).click();
     cy.url().should("include", "/post");
-    cy.get("h1").contains(/Latest Stories/i);
+    cy.get("h1").contains(/最新动态/i);
   });
 });
 
