@@ -1,6 +1,6 @@
 ---
-title: " 盛永国际"
-subtitle: " "
+title: .   盛  永   国   际  .
+subtitle: 您的电池解决方案专家
 image: img/img_topimg3.jpg
 blurb:
   heading: 盛永国际
