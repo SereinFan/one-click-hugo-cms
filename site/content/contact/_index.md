@@ -2,18 +2,17 @@
 title: 联系我们
 logo: /img/logo.svg
 contact_entries:
-  - heading: Location
-    text: 3153 Lynn Avenue, South San Francisco, California 94080
-  - heading: Working hours
-    text: "Monday – Saturday: 9AM – 7PM We’re closed on Sundays"
+  - heading: 地址
+    text: 上海市浦东新区龙阳路2277号永达国际大厦1601室
+  - heading: 电话：
+    text: 021-68549640
+  - heading: 邮编：
+    text: "201204"
+  - heading: 传真
+    text: 021-68549650
 ---
+盛永始于1999年，以“服务、创新、精益求精”为经营理念。经过二十余年的发展逐步成长为一个以市场为先导、产品开发为主，兼有部分设计加工，品质管理等技术能力，注重企业间合作的工贸一体化企业。
 
-We’d love to get in touch with you and hear your ideas and
-questions. We strive to grow and improve constantly and your feedback
-is valuable for us.
 
-<h3 class="f4 b lh-title mb2">How can I get…?</h3>
 
-You can also use the form below for any inquiries about coffee
-availability, monthly subscriptions and scheduling a 1-on-1 session
-with our baristas. Don’t be shy, drop us a line!
+现在，通过“人才培养、管理模式变革、商业模式转换”这三点经营方针，利用我们技术信息、市场开拓等方面的优势，以多种方式建立自己的销售网络，使自身的产品和服务更大程度地融入整个价值链体系中，更大产业链发展的外延，更好地为新老客户服务。
