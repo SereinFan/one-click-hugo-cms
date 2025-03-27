@@ -1,9 +1,9 @@
 ---
-title: " "
-subtitle: " "
+title: " Sotech"
+subtitle: "  "
 image: img/img_topimg3.jpg
 blurb:
-  heading: 盛永国际
+  heading: 上海盛永国际
   text: 宝泉公司中国区独家销售代理 | 专注于将宝泉公司先进的技术、设备和解决方案引入中国市场。
 intro:
   heading: 我们的产品与服务
