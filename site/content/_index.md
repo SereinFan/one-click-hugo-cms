@@ -1,10 +1,10 @@
 ---
-title: " Sotech"
-subtitle: "  "
+title: SOTECH
+subtitle: "  上海盛永国际贸易有限公司"
 image: img/img_topimg3.jpg
 blurb:
-  heading: 上海盛永国际
-  text: 宝泉公司中国区独家销售代理 | 专注于将宝泉公司先进的技术、设备和解决方案引入中国市场。
+  heading: 宝泉公司中国区独家销售代理
+  text: 专注于将宝泉公司先进的技术、设备和解决方案引入中国市场。
 intro:
   heading: 我们的产品与服务
   text: 我们致力于为研发中心、大学、制造商及各行业客户提供高品质的电池组装设备、研究与测试设备、电池部件与材料等产品，同时提供专业的技术支持与服务。
