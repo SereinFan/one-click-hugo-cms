@@ -1,7 +1,7 @@
 ---
 title: SOTECH
 subtitle: "  上海盛永国际贸易有限公司"
-image: img/img_topimg3.jpg
+image: img/head.png
 blurb:
   heading: 宝泉公司中国区独家销售代理
   text: 专注于将宝泉公司先进的技术、设备和解决方案引入中国市场。
