@@ -46,7 +46,7 @@ export default class HomePreview extends React.Component {
               <div className="w-60-l mb0">
                 {widgetFor("values")}
               </div>
-              <!--p{entry.getIn(["data", "values", "text"])}/p-->
+              
             </div>
 
             <div className="w-60-l ph2-l">
