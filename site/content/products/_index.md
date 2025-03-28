@@ -1,7 +1,7 @@
 ---
-title: 产品
+title: 产品信息
 type: products
-image: img/img_topimg4.jpg
+image: img/head2.png
 intro:
   heading: What we offer
   description: Kaldi is the ultimate spot for coffee lovers who want to learn
