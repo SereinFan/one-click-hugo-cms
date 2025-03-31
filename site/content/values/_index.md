@@ -7,11 +7,11 @@ values:
       技术创新：引入宝泉公司全球领先的电池技术与设备，助力中国客户开发最佳产品。
       环境责任：关注全球环境状况，推动清洁能源发展，支持绿色制造。
       客户至上：以专业的服务和全面的技术支持，满足客户的多样化需求。
-    imageUrl: img/img_topimg1.jpg
+    imageUrl: img/head1.png
   - heading: "我们的合作伙伴：宝泉公司 "
     text: >-
       宝泉公司自1993年成立以来，始终活跃于全球电池业务领域。凭借其对环境保护和清洁能源的关注，宝泉公司开发出满足客户需求的创新设备，助力全球电池行业的技术革新。
 
       访问宝泉公司官网了解更多：www.hohsen.co.jp
-    imageUrl: img/img_topimg1.jpg
+    imageUrl: img/head1.png
 ---
