@@ -1,9 +1,7 @@
 ---
 title: 联系我们
 logo: /img/logo.svg
-contact_entries:
-  - heading: 地址
-    text: 上海市浦东新区龙阳路2277号永达国际大厦1601室
+contact_entries: []
 ---
 
 
