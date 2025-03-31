@@ -12,16 +12,14 @@ const MediaBlock = ({heading, text, imageUrl, reverse}) => {
     </div>
     <div className="ph3-m w-50-m">
       <h3 className="f3 b lh-title mb1">{heading}</h3>
-      <div>
-        {widgetFor("text")}
-      </div>
+      <p>{text}</p>
     </div>
   </div>;
 };
 
 export default class ValuesPreview extends React.Component {
   render() {
-    const {entry, getAsset} = this.props;
+    const {entry, widgetFor, getAsset} = this.props;
 
     const image = getAsset(entry.getIn(["data", "image"]));
     const entryValues = entry.getIn(["data", "values"]);
