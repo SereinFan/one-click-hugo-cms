@@ -12,7 +12,7 @@ const MediaBlock = ({heading, text, imageUrl, reverse}) => {
     </div>
     <div className="ph3-m w-50-m">
       <h3 className="f3 b lh-title mb1">{heading}</h3>
-      <p>{text}</p>
+      <div>{text}</div>
     </div>
   </div>;
 };
@@ -30,7 +30,7 @@ export default class ValuesPreview extends React.Component {
       <div className="bg-off-white pv4">
         <div className="mw7 center ph3 pt4">
           {values.map(({text, heading, imageUrl}, i) =>
-            <MediaBlock key={i} text={text} heading={heading} imageUrl={imageUrl} reverse={i % 2 === 0} />
+            <MediaBlock key={i} text={widgetFor(`values.${i}.text`)} heading={heading} imageUrl={imageUrl} reverse={i % 2 === 0} />
           )}
         </div>
       </div>
