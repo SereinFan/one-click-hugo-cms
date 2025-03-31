@@ -1,6 +1,6 @@
 ---
 title: 公司简介
-image: img/head1.png
+image: img/简介.png
 values:
   - heading: 我们的愿景
     text: |-
