@@ -3,11 +3,8 @@ title: 产品信息
 type: products
 image: img/head2.png
 intro:
-  heading: What we offer
-  description: Kaldi is the ultimate spot for coffee lovers who want to learn
-    about their java’s origin and support the farmers that grew it. We take
-    coffee production, roasting and brewing seriously and we’re glad to pass
-    that knowledge to anyone.
+  heading: 我们的产品与服务
+  description: 近年来，延长手机和笔记本电脑等设备的电池寿命已成为优先事项。然而，这一领域的研究成果不仅限于手机等设备的应用，还为混合动力汽车和其他需要“清洁”能源的设备的电池研究奠定了基础。在宝泉公司，我们密切关注能源市场的当前趋势、战略设备引入的需求以及其他设备的开发。
   blurbs:
     - image: /img/illustrations-coffee.svg
       text: >
