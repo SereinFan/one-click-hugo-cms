@@ -1,9 +1,9 @@
 ---
-title: SOTECH
+title: Sotech  &  Hohsen
 subtitle: "  推动电池行业技术革新"
-image: img/head.png
+image: img/c15d004f76564192a0997f050a079cd3ba37bd051fbd1b3694df6903df9be5f5.png
 blurb:
-  heading: 上海盛永国际贸易有限公司
+  heading: Sotech上海盛永
   text: |-
     ————宝泉公司中国区独家销售代理 | 专注于将宝泉公司先进的技术、设备和解决方案引入中国市场。
 
