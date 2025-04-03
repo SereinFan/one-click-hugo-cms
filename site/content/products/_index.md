@@ -43,13 +43,7 @@ main:
       LiBF4、LiPF6、LiClO4、LiSO3CF3、LiN(SO2CF3)2、 　LiN(SO2CF3)(SO2C4F9)　1M
       LiPF6、EC : DMC=1 : 1 (Vol. %) 1M LiPF6、  且不限于以上各类基础材料，欢迎垂询。"
     image: img/imgview9d4e.jpg
-testimonials:
-  - author: Elisabeth Kaurismäki
-    quote: The first time I tried Kaldi’s coffee, I couldn’t even believe that was
-      the same thing I’ve been drinking every morning.
-  - author: Philipp Trommler
-    quote: Kaldi is the place to go if you want the best quality coffee. I love
-      their stance on empowering farmers and transparency.
+testimonials: []
 full_image: /img/products-full-width.jpg
 pricing:
   heading: 更多定制与服务
