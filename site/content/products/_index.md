@@ -14,11 +14,6 @@ intro:
       text: |+
         研究与测试设备：支持电池研发与性能测试，助力科研机构与实验室的创新突破。
 
-    - image: /img/illustrations-tutorials.svg
-      text: |+
-        技术支持与服务：专业团队提供全面的技术支持与售后服务，解决客户的技术难题。
-
-
 main:
   heading: 电池部件与材料
   description: |
