@@ -6,11 +6,11 @@ intro:
   heading: 我们的产品与服务
   description: 近年来，延长手机和笔记本电脑等设备的电池寿命已成为优先事项。然而，这一领域的研究成果不仅限于手机等设备的应用，还为混合动力汽车和其他需要“清洁”能源的设备的电池研究奠定了基础。在宝泉公司，我们密切关注能源市场的当前趋势、战略设备引入的需求以及其他设备的开发。
   blurbs:
-    - image: img/imgview9d4e.jpg
+    - image: img/imgview4236.jpg
       text: |+
         电池部件与材料：提供高品质的电池部件与材料，确保产品性能与可靠性。
 
-    - image: img/imgview6dcc.jpg
+    - image: img/imgview3365.jpg
       text: |+
         研究与测试设备：支持电池研发与性能测试，助力科研机构与实验室的创新突破。
 
@@ -52,9 +52,10 @@ testimonials:
       their stance on empowering farmers and transparency.
 full_image: /img/products-full-width.jpg
 pricing:
-  heading: Monthly subscriptions
-  description: We make it easy to make great coffee a part of your life. Choose
-    one of our monthly subscription plans to receive great coffee at your
-    doorstep each month. Contact us about more details and payment info.
+  heading: 更多定制与服务
+  description: 电池相关工程
+    我们在该领域的活动主要包括与二次电池、镍镉电池、镍氢电池、锂离子电池、聚合物电池、双电解电容器、燃料电池和太阳能电池等开发和生产设备相关的工程，以及相关材料和部件的销售。  能源相关技术
+    宝泉公司从早期阶段就参与了混合动力汽车、下一代低污染汽车以及更实用的电池驱动汽车的开发。通过收集来自全球能源存储领域的信息，我们为客户提供高水平的技术服务。  生物科学
+    我们通过提供高质量的产品支持该领域的研究人员
   plans: []
 ---
