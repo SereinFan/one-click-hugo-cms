@@ -1,0 +1,20 @@
+{{ define "main" }}
+
+<div class="ph3 bg-off-white">
+    <div class="center mw6 pv3">
+        <h1 class="f2 lh-title b mb3">Categories</h1>
+        <div class="mw7 center">
+            <ul class="flex-ns flex-wrap mhn1-ns pa3">
+                {{ range .Data.Terms.ByCount }}
+                <li class="w-100 ph1-ns">
+                    <a href="{{ .Page.RelPermalink }}" class="link db pa3 br3 bg-white mb2">
+                        <h2 class="f3 b lh-title mb1">{{ .Page.Title }} ({{ .Count }})</h2>
+                    </a>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+</div>
+
+{{end}}

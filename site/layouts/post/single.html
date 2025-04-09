@@ -6,6 +6,14 @@
       <p>{{ .Date.Format "Mon, Jan 2, 2006" }}</p>
       <p>Read in {{ .ReadingTime }} minutes</p>
     </div>
+    {{ with .Params.categories }}
+    <div class="tags grey-3 pb3">
+      <strong>Categories:</strong>
+      {{ range . }}
+        <a href='{{ "/categories/" | relLangURL }}{{ . | urlize }}' class="link grey-3 ph2">{{ . }}</a>
+      {{ end }}
+    </div>
+    {{ end }}
     <div class="cms mw6">
       <p>{{ .Description }}</p>
       {{ with .Resources.Get .Params.image }}<img src="{{ .RelPermalink }}" alt="{{ $.Title }}" />{{ end }}

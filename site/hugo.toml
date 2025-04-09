@@ -2,7 +2,10 @@ baseurl = "/"
 languageCode = "en-us"
 languageLang = "en"
 title = "Sotech"
-disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
+#disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
 
 [params]
 images = ["img/og-image.jpg"]
+
+[taxonomies]
+  category = "categories"
