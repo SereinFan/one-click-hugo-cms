@@ -17,6 +17,15 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Intro Blurb", name: "description", widget: "text"}
       - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "categories"
+    label: "产品分类"
+    folder: "site/content/categories"
+    create: true
+    fields:
+      - {label: "分类名称", name: "title", widget: "string"}
+      - {label: "分类图片", name: "image", widget: "image"}
+      - {label: "分类描述", name: "description", widget: "text"}
+      - {label: "详细介绍", name: "body", widget: "markdown"}
   - name: "pages"
     label: "Pages"
     files:
