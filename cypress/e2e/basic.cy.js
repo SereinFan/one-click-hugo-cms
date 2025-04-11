@@ -7,9 +7,9 @@ describe("empty spec", () => {
     cy.get("h1").contains("盛永");
   });
 
-  it("navigates to the product page", () => {
-    cy.get('a[href="/products"]').eq(0).click();
-    cy.url().should("include", "/products");
+  it("navigates to the blog page", () => {
+    cy.get('a[href="/post"]').eq(0).click();
+    cy.url().should("include", "/post");
     cy.get("h1").contains(/产品/i);
   });
 
@@ -19,9 +19,9 @@ describe("empty spec", () => {
     cy.get("h1").contains(/公司简介/i);
   });
 
-  it("navigates to the blog page", () => {
-    cy.get('a[href="/post"]').eq(0).click();
-    cy.url().should("include", "/post");
+  it("navigates to the product page", () => {
+    cy.get('a[href="/products"]').eq(0).click();
+    cy.url().should("include", "/products");
     cy.get("h1").contains(/最新动态/i);
   });
 });
