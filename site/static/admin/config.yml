@@ -21,6 +21,8 @@ collections: # A list of collections the CMS should be able to edit
     label: "产品分类"
     folder: "site/content/categories"
     create: true
+    editor:
+      preview: true
     fields:
       - {label: "分类名称", name: "title", widget: "string"}
       - {label: "分类图片", name: "image", widget: "image"}
