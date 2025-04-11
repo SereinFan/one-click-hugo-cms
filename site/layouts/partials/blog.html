@@ -2,6 +2,12 @@
 	<div class="ph3 mw7 center">
 
 		<h2 class="f2 b lh-title mb3">我们的产品与服务</h2>
+		{{ if .Site.Params.product_intro }}
+		  <div class="mw7 center pv3">
+		    <p class="f4 lh-copy mid-gray">{{ .Site.Params.product_intro }}</p>
+		  </div>
+		{{ end }}
+
 
 		<div class="w-100 flex-ns mhn1-ns flex-wrap mb3">
 			{{ with .Site.GetPage "/categories" }}
