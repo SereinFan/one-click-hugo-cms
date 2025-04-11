@@ -1,11 +1,11 @@
 {{ define "main" }}
 
-{{ partial "jumbotron" (dict "imageUrl" "/img/blog-index.jpg" "产品" .title) }}
+{{ if eq .Section "categories" }}
+  {{ with .Site.GetPage "/categories" }}
+    {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title) }}
 
-<div class="mw7 center">
-  {{ if eq .Section "categories" }}
-    <div class="flex-ns flex-wrap mhn1-ns pa3">
-      {{ with .Site.GetPage "/categories" }}
+    <div class="mw7 center">
+      <div class="flex-ns flex-wrap mhn1-ns pa3">
         {{ range .Params.categories_list }}
           <div class="w-50-ns ph1-ns flex mb4">
             <div class="bg-white br3 pa3 w-100 shadow-1 hover-shadow-2">
@@ -23,9 +23,13 @@
             </div>
           </div>
         {{ end }}
-      {{ end }}
+      </div>
     </div>
-  {{ else }}
+  {{ end }}
+{{ else }}
+  {{ partial "jumbotron" (dict "imageUrl" "/img/blog-index.jpg" "title" .Title) }}
+  
+  <div class="mw7 center">
     <ul class="flex-ns flex-wrap mhn1-ns pa3">
       {{ range .Pages }}
         <li class="w-100 ph1-ns">
@@ -37,7 +41,7 @@
         </li>
       {{ end }}
     </ul>
-  {{ end }}
-</div>
+  </div>
+{{ end }}
 
 {{end}}
