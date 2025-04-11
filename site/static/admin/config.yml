@@ -7,7 +7,7 @@ public_folder: "img"
 
 collections: # A list of collections the CMS should be able to edit
   - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
-    label: "Post" # Used in the UI, ie.: "New Post"
+    label: "产品" # Used in the UI, ie.: "New Post"
     folder: "site/content/post" # The path to the folder where the documents are stored
     path: "{{slug}}/index" # Each document is inside a folder with the slug name.
     create: true # Allow users to create new documents in this collection
@@ -31,7 +31,7 @@ collections: # A list of collections the CMS should be able to edit
     files:
       - file: "site/content/_index.md"
         label: "Home Page"
-        name: "home"
+        name: "主页"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
@@ -50,7 +50,7 @@ collections: # A list of collections the CMS should be able to edit
               {label: "Text", name: "text", widget: "markdown"}]}
       - file: "site/content/contact/_index.md"
         label: "Contact page"
-        name: "Contact"
+        name: "联系我们"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Logo, name: logo, widget: image}
@@ -67,7 +67,7 @@ collections: # A list of collections the CMS should be able to edit
                 widget: text
       - file: "site/content/products/_index.md"
         label: "Products page"
-        name: "Products"
+        name: "最新动态"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Image, name: image, widget: image}
@@ -78,7 +78,7 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}
       - file: "site/content/values/_index.md"
         label: "Values page"
-        name: "Values"
+        name: "公司简介"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Image, name: image, widget: image}
