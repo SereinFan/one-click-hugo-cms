@@ -2,7 +2,7 @@
 
 {{ if eq .Section "categories" }}
   {{ with .Site.GetPage "/categories" }}
-    {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title) }}
+    {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Params.title) }}
 
     <div class="mw7 center">
       <div class="flex-ns flex-wrap mhn1-ns pa3">
