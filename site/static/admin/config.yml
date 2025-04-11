@@ -26,6 +26,7 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: "页面标题", name: "title", widget: "string"}
           - {label: "顶部背景图", name: "image", widget: "image"}
+          - {label: "产品简介", name: "product_intro", widget: "string"}
           - label: "分类列表"
             name: "categories_list"
             widget: "list"
