@@ -1,47 +1,29 @@
 {{ define "main" }}
 
-{{ if eq .Section "categories" }}
-  {{ with .Site.GetPage "/categories" }}
-    {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Params.title) }}
+{{ with .Site.GetPage "/categories" }}
+  {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Params.title) }}
 
-    <div class="mw7 center">
-      <div class="flex-ns flex-wrap mhn1-ns pa3">
-        {{ range .Params.categories_list }}
-          <div class="w-50-ns ph1-ns flex mb4">
-            <div class="bg-white br3 pa3 w-100 shadow-1 hover-shadow-2">
-              <div class="no-underline">
-                {{ if .image }}
-                  <img src="{{ .image }}" alt="{{ .name }}" class="w-100 br3 mb3" style="height: 200px; object-fit: cover;">
-                {{ else }}
-                  <div class="bg-grey-1 br3 mb3" style="height: 200px; width: 100%;"></div>
-                {{ end }}
-                <h3 class="f3 b lh-title mb2 primary">{{ .name }}</h3>
-                {{ if .description }}
-                  <p class="mid-gray mb3">{{ .description }}</p>
-                {{ end }}
-              </div>
+  <div class="mw7 center">
+    <div class="flex-ns flex-wrap mhn1-ns pa3">
+      {{ range .Params.categories_list }}
+        <div class="w-50-ns ph1-ns flex mb4">
+          <div class="bg-white br3 pa3 w-100 shadow-1 hover-shadow-2">
+            <div class="no-underline">
+              {{ if .image }}
+                <img src="{{ .image }}" alt="{{ .name }}" class="w-100 br3 mb3" style="height: 200px; object-fit: cover;">
+              {{ else }}
+                <div class="bg-grey-1 br3 mb3" style="height: 200px; width: 100%;"></div>
+              {{ end }}
+              <h3 class="f3 b lh-title mb2 primary">{{ .name }}</h3>
+              {{ if .description }}
+                <p class="mid-gray mb3">{{ .description }}</p>
+              {{ end }}
             </div>
           </div>
-        {{ end }}
-      </div>
-    </div>
-  {{ end }}
-{{ else }}
-  {{ partial "jumbotron" (dict "imageUrl" "/img/blog-index.jpg" "title" .Title) }}
-  
-  <div class="mw7 center">
-    <ul class="flex-ns flex-wrap mhn1-ns pa3">
-      {{ range .Pages }}
-        <li class="w-100 ph1-ns">
-          <a href="{{ .RelPermalink }}" class="link db pa3 br3 bg-white mb2">
-            <h2 class="f3 b lh-title mb1">{{ .Title }}</h2>
-            <p class="mid-gray lh-title mb2">{{ .Date.Format "Mon, Jan 2, 2006" }}</p>
-            <p class="mb0">{{ .Description }}</p>
-          </a>
-        </li>
+        </div>
       {{ end }}
-    </ul>
+    </div>
   </div>
 {{ end }}
 
-{{end}}
+{{ end }}
