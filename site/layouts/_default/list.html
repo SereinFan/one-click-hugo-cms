@@ -1,16 +1,25 @@
 {{ define "main" }}
 
-{{ partial "jumbotron" (dict "imageUrl" "/img/blog-index.jpg" "title" "最新动态") }}
+{{ partial "jumbotron" (dict "imageUrl" "/img/blog-index.jpg" "title" "文章分类") }}
 
 <div class="mw7 center">
-  <ul id="blog-list" class="flex-ns flex-wrap mhn1-ns pa3">
-      {{ range (.Paginator 4).Pages.ByPublishDate.Reverse }}
-          <li class="w-50-ns ph1-ns flex">
-            {{ .Render "li"}}
-          </li>
-      {{ end }}
-  </ul>
-  {{ partial "pagination" . }}
+  <div class="flex-ns flex-wrap mhn1-ns pa3">
+    {{ range $key, $taxonomy := .Site.Taxonomies.categories }}
+      <div class="w-50-ns ph1-ns flex mb4">
+        <div class="bg-white br3 pa3 w-100">
+          <a href="/categories/{{ $key | urlize }}" class="no-underline">
+            {{ if (fileExists (print "static/img/categories/" $key ".jpg")) }}
+              <img src="/img/categories/{{ $key }}.jpg" alt="{{ $key }}" class="w-100 br3 mb3">
+            {{ else }}
+              <div class="bg-grey-1 br3 mb3" style="height: 200px; width: 100%;"></div>
+            {{ end }}
+            <h3 class="f3 b lh-title mb2 primary">{{ $key }}</h3>
+            <p class="mid-gray">共 {{ len $taxonomy }} 篇文章</p>
+          </a>
+        </div>
+      </div>
+    {{ end }}
+  </div>
 </div>
 
 {{end}}
