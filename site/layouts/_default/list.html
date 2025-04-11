@@ -7,12 +7,13 @@
       <p class="f4 lh-copy mid-gray">{{ .Params.product_intro }}</p>
     </div>
   {{ end }}
+
   <div class="mw7 center">
     <div class="flex-ns flex-wrap mhn1-ns pa3">
       {{ range .Params.categories_list }}
         <div class="w-50-ns ph1-ns flex mb4">
           <div class="bg-white br3 pa3 w-100 shadow-1 hover-shadow-2">
-            <div class="no-underline">
+            <a href="/categories/{{ .name | urlize }}" class="no-underline">
               {{ if .image }}
                 <img src="{{ .image }}" alt="{{ .name }}" class="w-100 br3 mb3" style="height: 200px; object-fit: cover;">
               {{ else }}
@@ -22,7 +23,7 @@
               {{ if .description }}
                 <p class="mid-gray mb3">{{ .description }}</p>
               {{ end }}
-            </div>
+            </a>
           </div>
         </div>
       {{ end }}
