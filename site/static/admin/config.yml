@@ -36,8 +36,8 @@ collections: # A list of collections the CMS should be able to edit
     label: "Pages"
     files:
       - file: "site/content/_index.md"
-        label: "Home Page"
-        name: "主页"
+        label: "主页"
+        name: "Home Page"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
@@ -55,8 +55,8 @@ collections: # A list of collections the CMS should be able to edit
               {label: "Heading", name: "heading", widget: string},
               {label: "Text", name: "text", widget: "markdown"}]}
       - file: "site/content/contact/_index.md"
-        label: "Contact page"
-        name: "联系我们"
+        label: "联系我们"
+        name: "Contact page"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Logo, name: logo, widget: image}
@@ -72,8 +72,8 @@ collections: # A list of collections the CMS should be able to edit
                 name: text
                 widget: text
       - file: "site/content/products/_index.md"
-        label: "Products page"
-        name: "最新动态"
+        label: "最新动态"
+        name: "Products page"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Image, name: image, widget: image}
@@ -83,8 +83,8 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Full_image, name: full_image, widget: image}
           - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}
       - file: "site/content/values/_index.md"
-        label: "Values page"
-        name: "公司简介"
+        label: "公司简介"
+        name: "Values page"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Image, name: image, widget: image}
