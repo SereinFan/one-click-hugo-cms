@@ -1,5 +1,6 @@
 ---
 title: 产品分类
+image: img/head.png
 categories_list:
   - name: 电池部件与材料
     image: img/imgview4236.jpg
