@@ -1,25 +1,22 @@
 {{ define "main" }}
 
-{{ partial "jumbotron" (dict "imageUrl" "/img/blog-index.jpg" "title" "产品") }}
+{{ partial "jumbotron" (dict "imageUrl" "/img/blog-index.jpg" "title" .Title) }}
 
 <div class="mw7 center">
   <div class="flex-ns flex-wrap mhn1-ns pa3">
-    {{ range (where .Site.RegularPages "Type" "categories") }}
+    {{ range .Params.categories_list }}
       <div class="w-50-ns ph1-ns flex mb4">
-        <div class="bg-white br3 pa3 w-100">
-          <a href="{{ .RelPermalink }}" class="no-underline">
-            {{ if .Params.image }}
-              <img src="{{ .Params.image }}" alt="{{ .Title }}" class="w-100 br3 mb3">
+        <div class="bg-white br3 pa3 w-100 shadow-1 hover-shadow-2">
+          <a href="/categories/{{ .name | urlize }}" class="no-underline">
+            {{ if .image }}
+              <img src="{{ .image }}" alt="{{ .name }}" class="w-100 br3 mb3" style="height: 200px; object-fit: cover;">
             {{ else }}
               <div class="bg-grey-1 br3 mb3" style="height: 200px; width: 100%;"></div>
             {{ end }}
-            <h3 class="f3 b lh-title mb2 primary">{{ .Title }}</h3>
-            {{ if .Params.description }}
-              <p class="mid-gray mb3">{{ .Params.description }}</p>
+            <h3 class="f3 b lh-title mb2 primary">{{ .name }}</h3>
+            {{ if .description }}
+              <p class="mid-gray mb3">{{ .description }}</p>
             {{ end }}
-            <div class="w-100 pv2">
-              {{ .Content }}
-            </div>
           </a>
         </div>
       </div>
