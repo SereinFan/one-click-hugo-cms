@@ -1,18 +1,28 @@
 <div class="bg-off-white pv4">
 	<div class="ph3 mw7 center">
 
-		<h2 class="f2 b lh-title mb3">最新动态</h2>
+		<h2 class="f2 b lh-title mb3">博客分类</h2>
 
 		<div class="w-100 flex-ns mhn1-ns flex-wrap mb3">
-			{{ range first 4 (where .Data.Pages "Type" "post") }}
-				<div class="ph1-ns w-50-ns flex">
-					{{ .Render "li" }}
+			{{ range $key, $taxonomy := .Site.Taxonomies.categories }}
+				<div class="ph1-ns w-50-ns flex mb4">
+					<div class="bg-white br3 pa3 w-100">
+						<a href="/categories/{{ $key | urlize }}" class="no-underline">
+							{{ if (fileExists (print "static/img/categories/" $key ".jpg")) }}
+								<img src="/img/categories/{{ $key }}.jpg" alt="{{ $key }}" class="w-100 br3 mb3">
+							{{ else }}
+								<div class="bg-grey-1 br3 mb3" style="height: 200px; width: 100%;"></div>
+							{{ end }}
+							<h3 class="f3 b lh-title mb2 primary">{{ humanize $key }}</h3>
+							<p class="mid-gray">{{ len $taxonomy }} 篇文章</p>
+						</a>
+					</div>
 				</div>
 			{{ end }}
 		</div>
 
 		<div class="tc">
-			<a href="/post" class="btn raise">更多动态</a>
+			<a href="/categories" class="btn raise">查看所有分类</a>
 		</div>
 
 	</div>
