@@ -19,15 +19,19 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "categories"
     label: "产品分类"
-    folder: "site/content/categories"
-    create: true
-    editor:
-      preview: true
-    fields:
-      - {label: "分类名称", name: "title", widget: "string"}
-      - {label: "分类图片", name: "image", widget: "image"}
-      - {label: "分类描述", name: "description", widget: "text"}
-      - {label: "详细介绍", name: "body", widget: "markdown"}
+    files:
+      - file: "site/content/categories/_index.md"
+        label: "分类列表"
+        name: "categories"
+        fields:
+          - {label: "标题", name: "title", widget: "string"}
+          - label: "分类"
+            name: "categories_list"
+            widget: "list"
+            fields:
+              - {label: "分类名称", name: "name", widget: "string"}
+              - {label: "分类图片", name: "image", widget: "image"}
+              - {label: "分类描述", name: "description", widget: "text"}
   - name: "pages"
     label: "Pages"
     files:
