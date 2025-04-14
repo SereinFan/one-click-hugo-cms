@@ -14,7 +14,7 @@ main:
     提供高品质的电池部件与材料，确保产品性能与可靠性。
   image1:
     alt: 电池设备
-    image: img/imgview3365.jpg
+    image: ""
   image2:
     alt: 电池材料
     image: img/imgview4236.jpg
