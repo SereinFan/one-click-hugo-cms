@@ -4,13 +4,14 @@
 
 {{ partial "4-up" .Params.intro }}
 
-
 {{ with .Params.main }}
 <div class="mw7 center">
+  {{ range $index, $heading := .headings }}
   <div class="mw6 ph3 mb3">
-    <h3 class="f3 b lh-title mb2">{{ .heading }}</h3>
-    <p>{{ .description }}</p>
+    <h3 class="f3 b lh-title mb2">{{ $heading }}</h3>
+    <p>{{ index $.Params.main.descriptions $index }}</p>
   </div>
+  {{ end }}
 </div>
 
 <!-- Image grid -->
