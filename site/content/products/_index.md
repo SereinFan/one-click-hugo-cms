@@ -12,13 +12,13 @@ main:
   heading: 电池部件与材料
   description: |
     提供高品质的电池部件与材料，确保产品性能与可靠性。
-  ?image1:
+  image1:
     alt: 电池设备
     image: img/imgview3365.jpg
-  ?image2:
+  image2:
     alt: 电池材料
     image: img/imgview4236.jpg
-  ?image3:
+  image3:
     alt: 定制服务
     image: img/home-about-section.jpg
 testimonials:
