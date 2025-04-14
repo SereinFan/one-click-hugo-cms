@@ -74,7 +74,7 @@ collections: # A list of collections the CMS should be able to edit
                 name: text
                 widget: text
       - file: "site/content/products/_index.md"
-        label: "最新动态"
+        label: "服务"
         name: "Products page"
         fields:
           - {label: Title, name: title, widget: string}
