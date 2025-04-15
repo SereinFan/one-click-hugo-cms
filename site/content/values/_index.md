@@ -1,6 +1,6 @@
 ---
 title: 公司简介
-image: img/1744683127604.png
+image: img/output-2-.png
 values:
   - heading: 关于我们
     text: >-
