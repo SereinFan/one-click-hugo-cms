@@ -1,32 +1,33 @@
 {{ define "main" }}
 
-{{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title) }}
+{{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.description) }}
 
-{{ partial "4-up" .Params.intro }}
-
-{{ with .Params.main }}
 <div class="mw7 center">
-  {{ range $index, $heading := .headings }}
   <div class="mw6 ph3 mb3">
-    <h3 class="f3 b lh-title mb2">{{ $heading }}</h3>
-    <p>{{ index $.Params.main.descriptions $index }}</p>
+    <h3 class="f3 b lh-title mb2">{{ .Content }}</h3>
   </div>
-  {{ end }}
+
+  <ul class="flex-ns flex-wrap mhn1-ns pa3">
+    {{ range (where .Pages "Type" "product").ByDate.Reverse }}
+      <div class="w-100-ns ph1-ns flex mb4">
+        <a href="{{ .RelPermalink }}" class="no-underline pa3 bg-grey-1 br1 mb2 db raise w-100">
+          <div class="flex flex-column flex-row-ns">
+            {{ if .Params.image }}
+              <div class="pr3-ns mb3 mb0-ns w-40-ns">
+                <img src="{{ .Params.image }}" alt="{{ .Title }}" class="db" style="width: 100%; height: auto;">
+              </div>
+            {{ end }}
+            <div class="w-60-ns">
+              <h2 class="f3 b lh-title mb1 primary">{{ .Title }}</h2>
+              <p class="mid-gray lh-title mb2">{{ .Date.Format "2006年01月02日" }}</p>
+              <p class="mb0">{{ .Description }}</p>
+              <p class="link b dib black mb0">阅读更多 →</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    {{ end }}
+  </ul>
 </div>
-
-<!-- Image grid -->
-{{ partial "image-grid" . }}
-{{ end }}
-
-<div class="pb4">
-  {{ range .Params.testimonials }}
-    {{ partial "blockquote" . }}
-  {{ end }}
-</div>
-
-<!-- Full-width image -->
-<img src="{{ .Params.full_image }}" alt="" class="db w-100">
-
-{{ partial "table" .Params.pricing }}
 
 {{ end }}
