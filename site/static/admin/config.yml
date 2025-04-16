@@ -26,9 +26,9 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "标题", name: "title", widget: "string"}
       - {label: "发布日期", name: "date", widget: "datetime"}
       - {label: "简介", name: "description", widget: "text"}
-      - {label: "封面图片", name: "image", widget: "image"}
+      - {label: "封面图片", name: "image", widget: "image", media_library: {config: {choose_url: true}}}
       - {label: "类型", name: "type", widget: "hidden", default: "product"}
-      - {label: "内容", name: "body", widget: "markdown"}
+      - {label: "内容", name: "body", widget: "markdown", media_library: {config: {choose_url: true}}}
   - name: "categories"
     label: "产品分类"
     files:
