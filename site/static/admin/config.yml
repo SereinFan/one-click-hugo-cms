@@ -17,7 +17,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Intro Blurb", name: "description", widget: "text"}
       - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
-  - name: "product_blog" # 新增产品博客集合
+  - name: "product_blog" # 产品博客集合
     label: "服务博客" # 在 UI 中显示的名称
     folder: "site/content/products" # 存储文档的文件夹路径
     path: "{{slug}}/index" # 每个文档都在以 slug 命名的文件夹中
@@ -85,14 +85,6 @@ collections: # A list of collections the CMS should be able to edit
               - label: Text
                 name: text
                 widget: text
-      - file: "site/content/products/_index.md"
-        label: "服务博客页面"
-        name: "Products page"
-        fields:
-          - {label: "标题", name: "title", widget: "string"}
-          - {label: "图片", name: "image", widget: "image"}
-          - {label: "描述", name: "description", widget: "text"}
-          - {label: "内容", name: "body", widget: "markdown"}
       - file: "site/content/values/_index.md"
         label: "公司简介"
         name: "Values page"
