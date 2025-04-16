@@ -2,7 +2,7 @@
 title: 锂电池技术的最新进展
 date: 2025-04-15T10:00:00+08:00
 description: 探索锂电池技术的最新发展和创新，了解我们如何提升电池性能和寿命。
-image: /img/battery-tech.jpg
+image: /img/products-grid1.jpg
 type: product
 ---
 

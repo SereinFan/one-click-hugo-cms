@@ -1,0 +1,19 @@
+{{ define "main" }}
+
+  <div class="mw6 center ph3 pv4">
+    <h1 class="f2 lh-title b mb3">{{.Title}}</h1>
+    <div class="flex justify-between grey-3">
+      <p>{{ .Date.Format "2006年01月02日" }}</p>
+      <p>阅读时间 {{ .ReadingTime }} 分钟</p>
+    </div>
+    <div class="cms mw6">
+      <p class="f4 lh-copy">{{ .Description }}</p>
+      {{ if .Params.image }}
+      <div class="mb4">
+        <img src="{{ .Params.image }}" alt="{{ .Title }}" class="w-100">
+      </div>
+      {{ end }}
+      {{ .Content }}
+    </div>
+  </div>
+{{ end }}
