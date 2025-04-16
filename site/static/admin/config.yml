@@ -17,6 +17,18 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Intro Blurb", name: "description", widget: "text"}
       - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "product_blog" # 新增产品博客集合
+    label: "服务博客" # 在 UI 中显示的名称
+    folder: "site/content/products" # 存储文档的文件夹路径
+    path: "{{slug}}/index" # 每个文档都在以 slug 命名的文件夹中
+    create: true # 允许用户在此集合中创建新文档
+    fields: # 此集合中每个文档的字段
+      - {label: "标题", name: "title", widget: "string"}
+      - {label: "发布日期", name: "date", widget: "datetime"}
+      - {label: "简介", name: "description", widget: "text"}
+      - {label: "封面图片", name: "image", widget: "image"}
+      - {label: "类型", name: "type", widget: "hidden", default: "product"}
+      - {label: "内容", name: "body", widget: "markdown"}
   - name: "categories"
     label: "产品分类"
     files:
@@ -74,16 +86,13 @@ collections: # A list of collections the CMS should be able to edit
                 name: text
                 widget: text
       - file: "site/content/products/_index.md"
-        label: "服务"
+        label: "服务博客页面"
         name: "Products page"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Image, name: image, widget: image}
-          - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
-          - {label: Main, name: main, widget: object, fields: [{label: Content Blocks, name: content_blocks, widget: list, fields: [{label: Block, name: block, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}]}]}, {label: Image1, name: image1, widget: object, required: false, fields: [{label: Image, name: image, widget: image, required: false}, {label: Alt, name: alt, widget: string, required: false}]}, {label: Image2, name: image2, widget: object, required: false, fields: [{label: Image, name: image, widget: image, required: false}, {label: Alt, name: alt, widget: string, required: false}]}, {label: Image3, name: image3, widget: object, required: false, fields: [{label: Image, name: image, widget: image, required: false}, {label: Alt, name: alt, widget: string, required: false}]}]}
-          - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
-          - {label: Full_image, name: full_image, widget: image}
-          - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}
+          - {label: "标题", name: "title", widget: "string"}
+          - {label: "图片", name: "image", widget: "image"}
+          - {label: "描述", name: "description", widget: "text"}
+          - {label: "内容", name: "body", widget: "markdown"}
       - file: "site/content/values/_index.md"
         label: "公司简介"
         name: "Values page"
