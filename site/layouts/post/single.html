@@ -16,7 +16,7 @@
     {{ end }}
     <div class="cms mw6">
       <p>{{ .Description }}</p>
-      {{ with .Params.image }}<img src="{{ . | relURL }}" alt="{{ $.Title }}" />{{ end }}
+      {{ with .Resources.Get .Params.image }}<img src="{{ .RelPermalink }}" alt="{{ $.Title }}" />{{ end }}
       {{ .Content }}
     </div>
   </div>
