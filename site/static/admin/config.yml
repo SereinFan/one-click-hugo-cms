@@ -18,7 +18,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "product_blog" # 产品博客集合
-    label: "服务博客" # 在 UI 中显示的名称
+    label: "博客" # 在 UI 中显示的名称
     folder: "site/content/products" # 存储文档的文件夹路径
     path: "{{slug}}/index" # 每个文档都在以 slug 命名的文件夹中
     media_folder: "site/static/img"
@@ -28,7 +28,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "标题", name: "title", widget: "string"}
       - {label: "发布日期", name: "date", widget: "datetime"}
       - {label: "简介", name: "description", widget: "text"}
-      - {label: "封面图片", name: "image", widget: "image"}
+      - {label: "封面图片", name: "image", widget: "image", media_library: {config: {choose_url: true}}}
       - {label: "类型", name: "type", widget: "hidden", default: "product"}
       - {label: "内容", name: "body", widget: "markdown", media_library: {config: {choose_url: true}}}
   - name: "categories"
