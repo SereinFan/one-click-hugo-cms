@@ -2,7 +2,7 @@
 title: 新一代能源存储解决方案
 date: 2025-04-10T14:30:00+08:00
 description: 探索我们为工业和家庭用户提供的创新能源存储解决方案，助力可持续发展。
-image: /img/products-grid2.jpg
+image: /img/istockphoto-866599918-1024x1024.jpg
 type: product
 ---
 
