@@ -8,9 +8,9 @@
     </div>
     <div class="cms mw6">
       <p class="f4 lh-copy">{{ .Description }}</p>
-      {{ if .image }}
+      {{ if .Params.image }}
       <div class="mb4">
-        <img src="{{.image }}" alt="{{ .Title }}" class="w-100">
+        <img src="{{ .Params.image }}" alt="{{ .Title }}" class="w-100">
       </div>
       {{ end }}
       {{ .Content }}
