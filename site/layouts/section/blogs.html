@@ -8,7 +8,7 @@
   </div>
 
   <ul class="flex-ns flex-wrap mhn1-ns pa3">
-    {{ range (where .Pages "Type" "product").ByDate.Reverse }}
+    {{ range $products.Pages.ByDate.Reverse }}
       <div class="w-100-ns ph1-ns flex mb4">
         <a href="{{ .RelPermalink }}" class="no-underline pa3 bg-grey-1 br1 mb2 db raise w-100">
           <div class="flex flex-column flex-row-ns">
