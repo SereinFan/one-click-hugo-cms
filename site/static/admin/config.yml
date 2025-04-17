@@ -89,7 +89,7 @@ collections: # A list of collections the CMS should be able to edit
               - label: Text
                 name: text
                 widget: text
-      - file: "site/content/blog/_index.md"
+      - file: "site/content/blogs/_index.md"
         label: "最新动态"
         name: "Products page"
         fields:
