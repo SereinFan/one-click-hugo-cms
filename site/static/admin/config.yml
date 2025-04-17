@@ -11,6 +11,8 @@ collections: # A list of collections the CMS should be able to edit
     folder: "site/content/post" # The path to the folder where the documents are stored
     path: "{{slug}}/index" # Each document is inside a folder with the slug name.
     create: true # Allow users to create new documents in this collection
+    media_folder: "site/static/img" # 显式设置媒体文件夹路径
+    public_folder: "/img" # 显式设置公共路径
     fields: # The fields each document in this collection have
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
