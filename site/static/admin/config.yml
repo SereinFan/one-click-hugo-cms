@@ -11,7 +11,7 @@ collections: # A list of collections the CMS should be able to edit
     folder: "site/content/post" # The path to the folder where the documents are stored
     path: "{{slug}}/index" # Each document is inside a folder with the slug name.
     create: true # Allow users to create new documents in this collection
-    media_folder: "site/static/img" # 显式设置媒体文件夹路径
+    media_folder: "../../static/img" # 显式设置媒体文件夹路径
     public_folder: "/img" # 显式设置公共路径
     fields: # The fields each document in this collection have
       - {label: "Title", name: "title", widget: "string"}
@@ -23,7 +23,7 @@ collections: # A list of collections the CMS should be able to edit
     label: "博客" # 在 UI 中显示的名称
     folder: "site/content/products" # 存储文档的文件夹路径
     path: "{{slug}}/index" # 每个文档都在以 slug 命名的文件夹中
-    media_folder: "site/static/img"
+    media_folder: "../../static/img"
     public_folder: "/img"
     create: true # 允许用户在此集合中创建新文档
     fields: # 此集合中每个文档的字段
