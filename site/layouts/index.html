@@ -4,9 +4,9 @@
 
 {{ partial "short-text" .Params.blurb}}
 
-{{ partial "text-and-image" (dict "heading" .Params.values.heading "text" .Params.values.text "buttonText" "更多信息" "buttonLink" "/values") }}
-
 {{ partial "blog" . }}
+
+{{ partial "text-and-image" (dict "heading" .Params.values.heading "text" .Params.values.text "buttonText" "更多信息" "buttonLink" "/values") }}
 
 {{ partial "2-up" .Params }}
 
