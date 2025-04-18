@@ -15,7 +15,7 @@ collections: # A list of collections the CMS should be able to edit
     public_folder: "/img" # 显式设置公共路径
     fields: # The fields each document in this collection have
       - {label: "标题", name: "title", widget: "string"}
-      - {label: "发布日期", name: "date", widget: "datetime"}
+      - {label: "分类", name: "categories", widget: "categories", multiple: true}
       - {label: "简介", name: "description", widget: "text"}
       - {label: "图片", name: "image", widget: "image", required: false}
       - {label: "内容", name: "body", widget: "markdown"}
@@ -136,3 +136,6 @@ collections: # A list of collections the CMS should be able to edit
                 name: "images"
                 widget: "list"
                 field: { label: "图片", name: "image", widget: "image" }
+
+scripts:
+  - /admin/js/category-widget.js
