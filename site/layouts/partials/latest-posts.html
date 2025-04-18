@@ -1,8 +1,8 @@
 <div class="mw7 center pt4 pb5">
   <h2 class="f2 b lh-title mb3">最新动态</h2>
   <div class="flex-ns flex-wrap mhn1-ns pa3">
-    {{ $blogs := .Site.GetPage "section" "blogs" }}
-    {{ range first 3 $blogs.Pages.ByDate.Reverse }}
+    {{ $products := .Site.GetPage "section" "products" }}
+    {{ range first 3 $products.Pages.ByDate.Reverse }}
       <div class="w-100 ph1-ns flex mb3">
         <a href="{{ .RelPermalink }}" class="no-underline pa3 bg-grey-1 br1 mb2 db raise w-100">
           <h3 class="f4 b lh-title mb1 primary">{{ .Title }}</h3>
@@ -13,7 +13,7 @@
     {{ end }}
   </div>
   <div class="tc">
-    <a href="/blogs" class="btn raise">查看更多动态</a>
+    <a href="/products" class="btn raise">查看更多动态</a>
   </div>
 </div>
 
