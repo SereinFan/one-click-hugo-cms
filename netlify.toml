@@ -5,9 +5,14 @@
 [build]
   command = "yarn build"
   publish = "dist"
+  functions = "netlify/functions"
 
 [context.deploy-preview]
   command = "yarn build:preview"
+
+[context.production.environment]
+  HUGO_VERSION = "0.101.0"
+  HUGO_ENV = "production"
 
 [dev]
   framework = "hugo"
@@ -18,3 +23,8 @@
 
   [plugins.inputs]
     record = true
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
