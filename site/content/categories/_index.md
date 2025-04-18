@@ -6,7 +6,7 @@ categories_list:
   - name: 电池部件与材料
     image: img/imgview4236.jpg
     description: 我们提供高品质的电池部件和材料，确保产品性能与可靠性，满足各类电池制造需求。
-  - name: 研究与测试设备
+  - name: 研发与测试设备
     image: img/imgview3365.jpg
     description: 支持电池研发与性能测试，助力科研机构与实验室的创新突破。
 ---
