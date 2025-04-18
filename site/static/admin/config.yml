@@ -14,11 +14,11 @@ collections: # A list of collections the CMS should be able to edit
     media_folder: "../../../static/img" # 显式设置媒体文件夹路径
     public_folder: "/img" # 显式设置公共路径
     fields: # The fields each document in this collection have
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Intro Blurb", name: "description", widget: "text"}
-      - {label: "Image", name: "image", widget: "image", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "标题", name: "title", widget: "string"}
+      - {label: "发布日期", name: "date", widget: "datetime"}
+      - {label: "简介", name: "description", widget: "text"}
+      - {label: "图片", name: "image", widget: "image", required: false}
+      - {label: "内容", name: "body", widget: "markdown"}
   - name: "product_blog" # 产品博客集合
     label: "博客" # 在 UI 中显示的名称
     folder: "site/content/products" # 存储文档的文件夹路径
@@ -51,47 +51,47 @@ collections: # A list of collections the CMS should be able to edit
               - {label: "分类图片", name: "image", widget: "image"}
               - {label: "分类描述", name: "description", widget: "text"}
   - name: "pages"
-    label: "Pages"
+    label: "页面"
     files:
       - file: "site/content/_index.md"
         label: "主页"
-        name: "Home Page"
+        name: "主页"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Subtitle, name: subtitle, widget: string}
-          - {label: Image, name: image, widget: image}
-          - {label: "Blurb", name: blurb, widget: object, fields: [
-              {label: "Heading", name: "heading", widget: string},
-              {label: "Text", name: "text", widget: "markdown"}]}
-          - {label: "Intro", name: intro, widget: object, fields: [
-              {label: "Heading", name: "heading", widget: string},
-              {label: "Text", name: "text", widget: "text"}]}
-          - {label: "Products", name: products, widget: list, fields: [
-              {label: "Image", name: "image", widget: "image"},
-              {label: "Text", name: "text", widget: "text"}]}
-          - {label: "Values", name: "values", widget: "object", fields: [
-              {label: "Heading", name: "heading", widget: string},
-              {label: "Text", name: "text", widget: "markdown"}]}
+          - {label: "标题", name: "title", widget: "string"}
+          - {label: "副标题", name: "subtitle", widget: "string"}
+          - {label: "图片", name: "image", widget: "image"}
+          - {label: "简介区块", name: "blurb", widget: "object", fields: [
+              {label: "标题", name: "heading", widget: "string"},
+              {label: "内容", name: "text", widget: "markdown"}]}
+          - {label: "介绍", name: "intro", widget: "object", fields: [
+              {label: "标题", name: "heading", widget: "string"},
+              {label: "内容", name: "text", widget: "text"}]}
+          - {label: "产品列表", name: "products", widget: "list", fields: [
+              {label: "图片", name: "image", widget: "image"},
+              {label: "描述", name: "text", widget: "text"}]}
+          - {label: "价值观", name: "values", widget: "object", fields: [
+              {label: "标题", name: "heading", widget: "string"},
+              {label: "内容", name: "text", widget: "markdown"}]}
       - file: "site/content/contact/_index.md"
         label: "联系我们"
-        name: "Contact page"
+        name: "联系我们"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Logo, name: logo, widget: image}
-          - {label: Body, name: body, widget: markdown}
-          - label: Contact Entries
-            name: contact_entries
-            widget: list
+          - {label: "标题", name: "title", widget: "string"}
+          - {label: "Logo", name: "logo", widget: "image"}
+          - {label: "内容", name: "body", widget: "markdown"}
+          - label: "联系方式"
+            name: "contact_entries"
+            widget: "list"
             fields:
-              - label: Heading
-                name: heading
-                widget: string
-              - label: Text
-                name: text
-                widget: text
+              - label: "标题"
+                name: "heading"
+                widget: "string"
+              - label: "内容"
+                name: "text"
+                widget: "text"
       - file: "site/content/blogs/_index.md"
         label: "最新动态"
-        name: "Products page"
+        name: "产品页面"
         fields:
           - {label: "标题", name: "title", widget: "string"}
           - {label: "类型", name: "type", widget: "hidden", default: "products"}
@@ -100,38 +100,38 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "内容", name: "body", widget: "markdown"}
       - file: "site/content/values/_index.md"
         label: "公司简介"
-        name: "Values page"
+        name: "公司简介"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Image, name: image, widget: image}
-          - label: Values
-            name: values
-            widget: list
+          - {label: "标题", name: "title", widget: "string"}
+          - {label: "图片", name: "image", widget: "image"}
+          - label: "价值观"
+            name: "values"
+            widget: "list"
             fields:
-              - {label: Heading, name: heading, widget: string}
-              - {label: Text, name: text, widget: markdown}
-              - {label: Image, name: imageUrl, widget: image}
+              - {label: "标题", name: "heading", widget: "string"}
+              - {label: "内容", name: "text", widget: "markdown"}
+              - {label: "图片", name: "imageUrl", widget: "image"}
   - name: "site_settings"
-    label: "Site Settings"
+    label: "网站设置"
     files:
       - file: "site/data/footer.json"
-        label: Footer
-        name: footer
+        label: "页脚"
+        name: "页脚"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Blurb, name: blurb, widget: text}
+          - {label: "标题", name: "title", widget: "string"}
+          - {label: "简介", name: "blurb", widget: "text"}
       - file: "site/hugo.toml"
-        label: Hugo Config
-        name: config
+        label: "Hugo配置"
+        name: "配置"
         editor:
           preview: false
         fields:
-          - {label: Site Title for Browser Tab, name: title, widget: string}
-          - label: Params
-            name: params
-            widget: object
+          - {label: "浏览器标签标题", name: "title", widget: "string"}
+          - label: "参数"
+            name: "params"
+            widget: "object"
             fields:
-              - label: Open Graph Image
-                name: images
-                widget: list
-                field: { label: Image, name: image, widget: image }
+              - label: "Open Graph图片"
+                name: "images"
+                widget: "list"
+                field: { label: "图片", name: "image", widget: "image" }
