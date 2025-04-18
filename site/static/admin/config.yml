@@ -63,15 +63,16 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "简介区块", name: "blurb", widget: "object", fields: [
               {label: "标题", name: "heading", widget: "string"},
               {label: "内容", name: "text", widget: "markdown"}]}
+          - {label: "价值观", name: "values", widget: "object", fields: [
+              {label: "标题", name: "heading", widget: "string"},
+              {label: "内容", name: "text", widget: "markdown"}]}
           - {label: "介绍", name: "intro", widget: "object", fields: [
               {label: "标题", name: "heading", widget: "string"},
               {label: "内容", name: "text", widget: "text"}]}
           - {label: "产品列表", name: "products", widget: "list", fields: [
               {label: "图片", name: "image", widget: "image"},
               {label: "描述", name: "text", widget: "text"}]}
-          - {label: "价值观", name: "values", widget: "object", fields: [
-              {label: "标题", name: "heading", widget: "string"},
-              {label: "内容", name: "text", widget: "markdown"}]}
+
       - file: "site/content/contact/_index.md"
         label: "联系我们"
         name: "联系我们"
