@@ -4,10 +4,12 @@
 
 {{ partial "short-text" .Params.blurb}}
 
+{{ partial "blog" . }}
+
 {{ partial "2-up" .Params }}
 
 {{ partial "text-and-image" (dict "heading" .Params.values.heading "text" .Params.values.text "buttonText" "更多信息" "buttonLink" "/values") }}
 
-{{ partial "blog" . }}
+{{ partial "latest-posts" . }}
 
 {{ end }}

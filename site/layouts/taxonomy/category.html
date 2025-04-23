@@ -1,18 +1,46 @@
 {{ define "main" }}
-
 <div class="ph3 bg-off-white">
-    <div class="center mw6 pv3">
-        <h1 class="f2 lh-title b mb3">Category: {{ .Title }}</h1>
-        <div class="mw7 center">
-            <ul class="flex-ns flex-wrap mhn1-ns pa3">
-                {{ range .Pages }}
-                    <li class="w-100">
-                        {{ .Render "li"}}
-                    </li>
-                {{ end }}
-            </ul>
-        </div>
+  <div class="center mw8 pv3 flex">
+    <!-- 左侧分类导航 -->
+    <div class="w-third pr4">
+      <div class="bg-white pa3 br1 shadow-1 sticky" style="top: 2rem;">
+        <h3 class="f4 b lh-title mb3 black tc">分类导航</h3>
+        <ul class="list pa0">
+          {{ range .Site.Taxonomies.categories }}
+            <li class="mb2">
+              <a href="{{ .Page.RelPermalink }}" class="link black hover-primary dib pv1 ph2 w-100 br1 {{ if eq .Page.Title $.Title }}bg-grey-1{{ end }}">
+                {{ .Page.Title }}
+              </a>
+            </li>
+          {{ end }}
+        </ul>
+      </div>
     </div>
+    
+    <!-- 右侧内容 -->
+    <div class="w-two-thirds">
+      <h1 class="f2 lh-title b mb3 black">{{ .Title }}</h1>
+      <div class="flex-ns flex-wrap mhn1-ns">
+        {{ range .Pages }}
+          <div class="w-100 ph1-ns flex mb3">
+            <div class="no-underline pa3 bg-grey-1 br1 mb2 db raise w-100">
+              <div class="flex items-center">
+                {{ with .Params.image }}
+                  <div class="w-third pr3">
+                    <img src="{{ . }}" alt="" class="db w-100 br1" style="height: 150px; object-fit: cover;">
+                  </div>
+                {{ end }}
+                <div class="w-two-thirds">
+                  <h3 class="f4 b lh-title mb1 black">{{ .Title }}</h3>
+                  <p class="mb0">{{ .Description }}</p>
+                </div>
+              </div>
+              <p class="link b dib black mb0 mt3">阅读更多 →</p>
+            </div>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
 </div>
-
-{{end}}
+{{ end }}
