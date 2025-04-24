@@ -1,0 +1,20 @@
+baseURL = "http://localhost:1313/"
+languageCode = "zh-cn"
+title = "产品中心"
+contentDir = "site/content"
+publishDir = "public"
+
+[params]
+  description = "产品展示网站"
+
+[markup.goldmark.renderer]
+  unsafe = true  # 允许原始HTML显示
+
+[outputs]
+  home = ["HTML"]
+
+[caches]
+[caches.assets]
+dir = ":cacheDir/assets"
+[caches.getjson]
+dir = ":cacheDir/getjson"

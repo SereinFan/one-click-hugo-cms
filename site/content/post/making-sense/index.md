@@ -5,7 +5,7 @@ description: The Coffee Taster’s Flavor Wheel, the official resource used by
   coffee tasters, has been revised for the first time this year.
 image: blog-flavor_wheel.jpg
 categories:
-  - 研究与测试设备
+  - 研发与测试设备
 ---
 
 The SCAA updated the wheel to reflect the finer nuances needed to describe flavors more precisely. The new descriptions are more detailed and hence allow cuppers to distinguish between more flavors.
