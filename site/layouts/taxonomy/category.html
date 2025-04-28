@@ -23,7 +23,7 @@
       <div class="flex-ns flex-wrap mhn1-ns">
         {{ range .Pages }}
           <div class="w-100 ph1-ns flex mb3">
-            <div class="no-underline pa3 bg-grey-1 br1 mb2 db raise w-100">
+            <a href="{{ .RelPermalink }}" class="no-underline pa3 bg-grey-1 br1 mb2 db raise w-100">
               <div class="flex items-center">
                 {{ with .Params.image }}
                   <div class="w-third pr3">
@@ -36,7 +36,7 @@
                 </div>
               </div>
               <p class="link b dib black mb0 mt3">阅读更多 →</p>
-            </div>
+            </a>
           </div>
         {{ end }}
       </div>
