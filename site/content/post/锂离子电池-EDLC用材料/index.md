@@ -1,9 +1,9 @@
 ---
-title: 锂离子电池、EDLC用材料
+title: 电池耗材
 date: 2025-04-24T10:25:07+08:00
 categories:
   - 电池部件与材料
-description: 用于锂离子电池和EDLC的材料评估。
+description: 电池耗材
 image: /img/imgview4a7f.jpg
 ---
 \* 纽扣电池套件（外壳、盖子、垫圈、间隔片、波形垫圈）
