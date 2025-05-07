@@ -1,26 +1,32 @@
 ---
-title: A beginners’ guide to brewing with Chemex
-description: Brewing with a Chemex probably seems like a complicated,
-  time-consuming ordeal, but once you get used to the process, it becomes a
-  soothing ritual that's worth the effort every time.
-image: blog-chemex.jpg
+title: 电极
 categories:
   - 电池部件与材料
+description: 锂离子电池用正负电极
+image: /img/imgview74e0.jpg
 ---
+正极材料
+1. HS-LIB-P-Co-001 钴酸锂（Lithium cobaltate）：
 
-This [week](/wdwdw) we’ll **take** a look at all the steps required to make astonishing coffee with a Chemex at home. The Chemex Coffeemaker is a manual, pour-over style glass-container coffeemaker that Peter Schlumbohm invented in 1941, and which continues to be manufactured by the Chemex Corporation in Chicopee, Massachusetts\*.
+钴酸锂是一种常用的正极材料，具有良好的循环稳定性和高能量密度。
+2. HS-LIB-P-NMC-001 三元系 NMC 1:1:1：
 
-In 1958, designers at the [Illinois Institute of Technology](https://www.spacefarm.digital) said that the Chemex Coffeemaker is *"one of the best-designed products of modern times"*, and so is included in the collection of the Museum of Modern Art in New York City.
+三元系NMC（镍、锰、钴）正极材料，具有高能量密度和良好的循环性能，是目前锂离子电池中常用的正极材料之一。
+3. HS-LIB-P-Mn-001 锰酸锂（Lithium manganate）：
 
-## The little secrets of Chemex brewing
+锰酸锂是一种成本较低、安全性好的正极材料，适用于一些特定的应用场景。
+4. HS-LIB-P-LFP-001 磷酸铁锂（Lithium iron phosphate）：
 
-The Chemex Coffeemaker consists of an hourglass-shaped glass flask with a conical funnel-like neck (rather than the cylindrical neck of an Erlenmeyer flask) and uses proprietary filters, made of bonded paper (thicker-gauge paper than the standard paper filters for a drip-method coffeemaker) that removes most of the coffee oils, brewing coffee with a taste that is different than coffee brewed in other coffee-making systems; also, the thicker paper of the Chemex coffee filters may assist in removing cafestol, a cholesterol-containing compound found in coffee oils. Here’s three important tips newbies forget about:
+磷酸铁锂是一种具有高安全性、长循环寿命的正极材料，常用于动力电池和储能电池。
 
-1. Always buy dedicated Chemex filters.
-2. Use a scale, don’t try to eyeball it.
-3. Never skip preheating the glass.
-4. Timing is key, don’t forget the clock.
+负极材料
+1. HS-LIB-N-Gr-001 球晶黑铅TSG-A1：
+球晶黑铅是一种传统的负极材料，具有良好的导电性和较高的理论容量。
 
-The most visually distinctive feature of the Chemex is the heatproof wooden collar around the neck, allowing it to be handled and poured when full of hot water. This is turned, then split in two to allow it to fit around the glass neck. The two pieces are held loosely in place by a tied leather thong. The pieces are not tied tightly and can still move slightly, retained by the shape of the conical glass.
+EDLC电极材料
+1. HS-EDLC-001 椰子壳活性炭 水蒸气活化：
+椰子壳活性炭是一种常用的超级电容器电极材料，具有高比表面积和良好的导电性。
 
-For a design piece that became popular post-war at a time of Modernism and precision manufacture, this juxtaposition of natural wood and the organic nature of a hand-tied knot with the laboratory nature of glassware was a distinctive feature of its appearance.
+定制服务
+我们可以根据客户的需求定制集电体的厚度、正负极活性物质的种类、电极宽度、标签宽度以及是否需要压制等参数，以满足不同的应用需求。
+以上是我们提供的正极和负极材料的详细情况，以及我们的定制服务。如果您有更具体的需求或疑问，请随时联系我们。
