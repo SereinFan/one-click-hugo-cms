@@ -1,7 +1,7 @@
 ---
 title: 智能引领，动力未来
 subtitle: —— 专注电池技术与可持续发展
-image: img/1744691099883.png
+image: /img/istockphoto-1424757969-1024x1024.jpg
 blurb:
   heading: SOTECH上海盛永
   text: ——宝泉公司中国区独家销售代理，我们致力于将宝泉公司先进的电池技术、设备和解决方案引入中国市场。推动中国电池行业的技术进步与可持续发展
