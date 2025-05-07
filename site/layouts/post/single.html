@@ -1,9 +1,10 @@
 {{ define "main" }}
 
-  <div class="mw6 center ph3 pv4">
+<body class="bg-off-white">
+  <div class="mw6 center ph3 bg-off-white pv4">
     <h1 class="f2 lh-title b mb3">{{.Title}}</h1>
     <div class="flex justify-between grey-3">
-     <!-- <p>{{ .Date.Format "Mon, Jan 2, 2006" }}</p>
+      <!-- <p>{{ .Date.Format "Mon, Jan 2, 2006" }}</p>
       <p>Read in {{ .ReadingTime }} minutes</p>-->
     </div>
     {{ with .Params.categories }}
@@ -22,4 +23,4 @@
       {{ .Content }}
     </div>
   </div>
-{{ end }}
+</body>
