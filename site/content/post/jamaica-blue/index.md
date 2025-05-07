@@ -1,28 +1,14 @@
 ---
-title: "Just in: small batch of Jamaican Blue Mountain in store next week"
+title: 英国THT公司制造的ARC热量计系统
 date: 2017-01-04T15:04:10.000Z
-description: We’re proud to announce that we’ll be offering a small batch of
-  Jamaica Blue Mountain coffee beans in our store next week.
 categories:
   - 研发与测试设备
+description: 通过控制试验室内和试验样品的温度差为“ΔT=0”，创造优异的模拟绝热环境。
 ---
+自1996年至今，ARC (绝热型热量计)作为化学物质引起热反应的基准，在世界上被使用得最多。 
 
-We expect the shipment of a limited quantity of green beans next Monday. We’ll be offering the roasted beans from Tuesday, but quantities are limited, so be quick.
+是目前世界上使用最多的THERMAL HAZARD TECHNOLOGY公司的绝热型热量计的。
 
-Blue Mountain Peak is the highest mountain in Jamaica and one of the highest peaks in the Caribbean at 7,402 ft. It is the home of Blue Mountain coffee and their famous tours. It is located on the border of the Portland and Saint Thomas parishes of Jamaica.
+通过控制试验室内和试验样品的温度差为“ΔT=0”，创造优异的模拟绝热环境。 可应对化学物质、硬币型电池、车载用电池，准确测量并数值化开始发热反应和自身发热的温度。
 
-## A little history
-
-The Blue Mountains are considered by many to be a hiker's and camper's paradise. The traditional Blue Mountain trek is a 7-mile hike to the peak and consists of a 3,000-foot increase in elevation. Jamaicans prefer to reach the peak at sunrise, thus the 3–4 hour hike is usually undertaken in darkness. Since the sky is usually very clear in the mornings, Cuba can be seen in the distance.
-
->Some of the plants found on the Blue Mountain cannot be found anywhere else in the world and they are often of a dwarfed sort.
-
-This is mainly due to the cold climate which inhibits growth. The small coffee farming communities of Claverty Cottage and Hagley Gap are located near the peak.
-
-## What you need to know before trying
-
-Jamaican Blue Mountain Coffee or Jamaica Blue Mountain Coffee is a classification of coffee grown in the Blue Mountains of Jamaica. The best lots of Blue Mountain coffee are noted for their mild flavor and lack of bitterness. Over the past few decades, this coffee has developed a reputation that has made it one of the most expensive and sought-after coffees in the world. Over 80% of all Jamaican Blue Mountain Coffee is exported to Japan. In addition to its use for brewed coffee, the beans are the flavor base of Tia Maria coffee liqueur.
-
-Jamaican Blue Mountain Coffee is a globally protected certification mark, meaning only coffee certified by the Coffee Industry Board of Jamaica can be labeled as such. It comes from a recognized growing region in the Blue Mountain region of Jamaica, and its cultivation is monitored by the Coffee Industry Board of Jamaica.
-
-The Blue Mountains are generally located between Kingston to the south and Port Antonio to the north. Rising 7,402 ft, they are some of the highest mountains in the Caribbean. The climate of the region is cool and misty with high rainfall. The soil is rich, with excellent drainage. This combination of climate and soil is considered ideal for coffee.
+通过测量对电池重要的热数据，有助于提高安全性、电池性能、能效、循环寿命。 0.01？ 具备0.05℃/分的发热速度检测灵敏度，能够稳定地检测电池放出的热量。 可以测量锂离子电池形成的SEI皮膜的分解开始温度。 被活用于电池制造商对每批的稳定性评价和质量管理。 测量电池发生失控反应所需的能量，这是以往的钉刺试验等无法测量的。
