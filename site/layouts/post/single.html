@@ -1,10 +1,11 @@
 {{ define "main" }}
 
-<body class="bg-off-white">
-  <div class="mw6 center ph3 pv4">
+<div class="ph3 bg-off-white">
+  <div class="center mw6 pv3">
+    <!-- 页面标题 -->
     <h1 class="f2 lh-title b mb3">{{ .Title }}</h1>
 
-    <!-- 显示分类标签 -->
+    <!-- 分类标签 -->
     {{ with .Params.categories }}
       <div class="tags grey-3 pb3">
         <strong>Categories:</strong>
@@ -14,21 +15,22 @@
       </div>
     {{ end }}
 
+    <!-- 文章内容 -->
     <div class="cms mw6">
-      <!-- 显示描述 -->
+      <!-- 描述 -->
       {{ if .Description }}
         <p>{{ .Description }}</p>
       {{ end }}
 
-      <!-- 显示图片 -->
+      <!-- 图片 -->
       {{ if .Params.image }}
         <img src="{{ .Params.image }}" alt="{{ .Title }}" />
       {{ end }}
 
-      <!-- 显示文章内容 -->
+      <!-- 主要内容 -->
       {{ .Content }}
     </div>
   </div>
-</body>
+</div>
 
 {{ end }}
