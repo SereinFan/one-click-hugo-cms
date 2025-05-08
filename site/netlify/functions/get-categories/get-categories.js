@@ -5,7 +5,7 @@ const matter = require('gray-matter'); // 引入 gray-matter 库
 exports.handler = async function(event, context) {
   try {
     // 修改路径为相对于函数文件的路径
-    const categoriesPath = path.resolve(__dirname, '../content/categories/_index.md');
+    const categoriesPath = path.resolve(__dirname, '../../site/content/categories/_index.md');
     const fileContent = fs.readFileSync(categoriesPath, 'utf8');
 
     // 使用 gray-matter 解析文件内容
