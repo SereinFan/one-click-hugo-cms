@@ -6,13 +6,14 @@ const CategoriesControl = createClass({
       categories: []
     };
   },
-  
+
   componentDidMount: function() {
     fetch('/.netlify/functions/get-categories')
       .then(response => response.json())
-      .then(categories => this.setState({ categories }));
+      .then(categories => this.setState({ categories }))
+      .catch(error => console.error('Error fetching categories:', error)); // 添加错误处理
   },
-  
+
   render: function() {
     const { value, onChange } = this.props;
     return h('select', {
@@ -20,7 +21,7 @@ const CategoriesControl = createClass({
       onChange: (e) => onChange(e.target.value),
       multiple: true
     },
-      this.state.categories.map(category => 
+      this.state.categories.map(category =>
         h('option', { value: category }, category)
       )
     );
