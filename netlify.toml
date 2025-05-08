@@ -1,46 +1,30 @@
 [build.environment]
   NETLIFY_USE_YARN = "true"
   YARN_VERSION = "1.22.17"
-  HUGO_VERSION = "0.101.0"
-  NODE_VERSION = "16"  # 锁定Node版本
 
 [build]
-  command = """
-    yarn install && 
-    (cd site/netlify/functions/get-categories && yarn install --production --ignore-scripts) &&
-    hugo --gc --minify --cleanDestinationDir
-  """
-  publish = "public"  # Hugo默认输出目录
-  functions = "site/netlify/functions"  # 对齐实际路径
+  command = "yarn build"
+  publish = "dist"
+  functions = "site/netlify/functions"
+
+[context.deploy-preview]
+  command = "yarn build:preview"
 
 [context.production.environment]
+  HUGO_VERSION = "0.101.0"
   HUGO_ENV = "production"
-  HUGO_ENABLEGITINFO = "true"
 
 [dev]
   framework = "hugo"
   targetPort = 3000
-  command = "hugo server -D -E -F --port 3000 --bind 0.0.0.0"
 
 [[plugins]]
   package = "netlify-plugin-cypress"
+
   [plugins.inputs]
     record = true
-    configFile = "cypress/config/project-config.json"
 
-# 缓存优化配置 (新增)
-[[plugins]]
-  package = "@netlify/plugin-functions-install-core"
-
-[functions]
-  node_bundler = "esbuild"  # 提升函数打包速度
-
-# 安全头设置
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Cache-Control = "public, max-age=3600"
-    X-Frame-Options = "DENY"
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
