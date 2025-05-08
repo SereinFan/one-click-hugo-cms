@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const matter = require('gray-matter'); // 引入 gray-matter 库
+
 
 exports.handler = async function(event, context) {
   try {
@@ -8,10 +8,10 @@ exports.handler = async function(event, context) {
     const categoriesPath = path.resolve(__dirname, '../../../content/categories/_index.md');
     const fileContent = fs.readFileSync(categoriesPath, 'utf8');
 
-    // 使用 gray-matter 解析文件内容
-    const parsedContent = matter(fileContent);
-    const categories = parsedContent.data.categories_list.map(category => category.name);
-
+    // 使用正则解析文件内容
+    const categories = fileContent.match(/name: "(.+)"/g)
+      .map(match => match.replace(/name: "/, '').replace(/"/, ''));
+    
     return {
       statusCode: 200,
       body: JSON.stringify(categories),
