@@ -138,4 +138,4 @@ collections: # A list of collections the CMS should be able to edit
                 field: { label: "图片", name: "image", widget: "image" }
 
 scripts:
-  - /admin/js/category-widget.js
+  - /static/admin/js/category-widget.js
