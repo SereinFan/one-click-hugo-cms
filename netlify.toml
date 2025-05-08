@@ -1,16 +1,16 @@
 [build.environment]
   NETLIFY_USE_YARN = "true"
   YARN_VERSION = "1.22.17"
-  HUGO_VERSION = "0.101.0"  # 统一管理版本
-  NODE_VERSION = "16"       # 新增Node版本锁定
+  HUGO_VERSION = "0.101.0"
+  NODE_VERSION = "16"  # 锁定Node版本
 
 [build]
   command = """
     yarn install && 
-    yarn --cwd site/netlify/functions/get-categories install &&
-    hugo --gc --minify
+    (cd site/netlify/functions/get-categories && yarn install --production --ignore-scripts) &&
+    hugo --gc --minify --cleanDestinationDir
   """
-  publish = "public"  # 修正发布目录
+  publish = "public"  # Hugo默认输出目录
   functions = "site/netlify/functions"  # 对齐实际路径
 
 [context.production.environment]
@@ -28,10 +28,25 @@
     record = true
     configFile = "cypress/config/project-config.json"
 
-# 静态资源缓存规则 (新增)
+# 缓存优化配置 (新增)
+[[plugins]]
+  package = "@netlify/plugin-functions-install-core"
+
+[functions]
+  node_bundler = "esbuild"  # 提升函数打包速度
+
+# 安全头设置
 [[headers]]
   for = "/*"
   [headers.values]
     Cache-Control = "public, max-age=3600"
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# 智能重定向 (可选)
+[[redirects]]
+  from = "/app/*"
+  to = "/app/index.html"
+  status = 200
+  force = true
