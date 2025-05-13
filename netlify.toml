@@ -3,7 +3,7 @@
   YARN_VERSION = "1.22.17"
 
 [build]
-  command = "yarn build"
+  command = "cd site/netlify/functions/get-categories && npm install && cd ../../../ && yarn build"
   publish = "dist"
   functions = "site/netlify/functions"
 
