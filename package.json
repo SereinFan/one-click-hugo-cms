@@ -12,7 +12,7 @@
     "preview:hugo": "npm run start:hugo -- -D -F",
     "preview:webpack": "npm run start:webpack",
     "prebuild": "rimraf dist",
-    "build": "hugo --destination dist && cp -r site/static dist", // 构建 Hugo 并复制静态文件
+    "build": "hugo --destination dist && cp -r site/static dist", 
     "build:preview": "npm run build:webpack && npm run build:hugo:preview",
     "build:hugo": "hugo -d ../dist -s site -v",
     "build:hugo:preview": "npm run build:hugo -- -D -F",
@@ -67,8 +67,8 @@
     "immutable": "^4.1.0",
     "netlify-plugin-cypress": "^2.2.1",
     "to-string-loader": "^1.2.0",
-    "preact": "^10.11.2", // 添加 preact
-    "netlify-cms-app": "^2.15.69", // 添加 netlify-cms-app
-    "gray-matter": "^4.0.3" // 添加 gray-matter (如果需要在本地使用)
+    "preact": "^10.11.2", 
+    "netlify-cms-app": "^2.15.69", 
+    "gray-matter": "^4.0.3" 
   }
 }
