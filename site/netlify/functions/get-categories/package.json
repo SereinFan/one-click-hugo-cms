@@ -1,6 +1,12 @@
 {
   "name": "get-categories",
   "version": "1.0.0",
-  "main": "get-categories.js",
-  "dependencies": {}
+  "scripts": {
+    "build": "hugo --destination dist && cp -r site/static dist"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "preact": "^10.11.2",
+    "netlify-cms-app": "^2.15.69"
+  }
 }
