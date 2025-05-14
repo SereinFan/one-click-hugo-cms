@@ -6,87 +6,97 @@ media_folder: "site/static/img"
 public_folder: "/img"
 
 collections:
-  # ================ 产品集合 ================
-  - name: "products"
-    label: "产品管理"
-    folder: "site/content/products"
+  # ================= 产品集合 =================
+  - name: "post"
+    label: "产品"
+    folder: "site/content/post"
+    path: "{{slug}}/index"
     create: true
     fields:
-      - { label: "产品名称", name: "title", widget: "string" }
-      - label: "产品分类"
+      - { label: "标题", name: "title", widget: "string" }
+      - label: "分类"
         name: "categories"
         widget: "relation"
         multiple: true
-        collection: "product_categories"  # 指向分类集合
+        collection: "categories"
         value_field: "slug"
         display_fields: ["name"]
         search_fields: ["name"]
-      - { label: "产品简介", name: "description", widget: "text" }
-      - { label: "产品图片", name: "image", widget: "image" }
-      - { label: "详细参数", name: "body", widget: "markdown" }
+      - { label: "简介", name: "description", widget: "text" }
+      - { label: "产品图片", name: "image", widget: "image", required: false }
+      - { label: "详细内容", name: "body", widget: "markdown" }
 
-  # ================ 分类管理 ================
-  - name: "product_categories"
-    label: "产品分类"
-    folder: "site/content/categories"
-    create: true
-    identifier_field: "slug"
-    fields:
-      - { label: "分类名称", name: "name", widget: "string", required: true }
-      - { label: "URL标识符", name: "slug", widget: "string", 
-          pattern: ["^[a-z0-9-]+$", "只允许小写字母、数字和连字符"] }
-      - { label: "分类图片", name: "image", widget: "image" }
-      - { label: "分类描述", name: "description", widget: "text" }
-
-  # ================ 博客管理 ================
-  - name: "blogs"
-    label: "技术博客"
+  # ================= 博客集合 =================
+  - name: "product_blog"
+    label: "博客"
     folder: "site/content/blogs"
+    path: "{{slug}}/index"
     create: true
     fields:
-      - { label: "文章标题", name: "title", widget: "string" }
-      - { label: "发布日期", name: "date", widget: "datetime" }
-      - { label: "摘要", name: "excerpt", widget: "text" }
-      - { label: "封面图片", name: "image", widget: "image" }
-      - { label: "正文内容", name: "body", widget: "markdown" }
+      - { label: "标题", name: "title", widget: "string" }
+      - { label: "发布日期", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: "HH:mm" }
+      - { label: "简介", name: "description", widget: "text" }
+      - { label: "封面图片", name: "image", widget: "image", required: false }
+      - { label: "类型", name: "type", widget: "hidden", default: "blog" }
+      - { label: "内容", name: "body", widget: "markdown" }
 
-  # ================ 页面管理 ================
-  - name: "pages"
-    label: "页面配置"
+  # ================= 分类配置 =================
+  - name: "categories"
+    label: "产品分类"
     files:
-      - file: "site/content/_index.md"
-        label: "首页配置"
-        name: "home_config"  # 唯一标识
-        fields:
-          - { label: "主标题", name: "title", widget: "string" }
-          - { label: "副标题", name: "subtitle", widget: "string" }
-          - { label: "背景图", name: "hero_image", widget: "image" }
-
-      - file: "site/content/contact.md"
-        label: "联系我们"
-        name: "contact_page"  # 唯一标识
+      - file: "site/content/categories/_index.md"
+        label: "分类管理"
+        name: "categories_config"
         fields:
           - { label: "页面标题", name: "title", widget: "string" }
+          - { label: "顶部背景图", name: "image", widget: "image" }
+          - { label: "产品简介", name: "product_intro", widget: "text" }
+          - label: "分类列表"
+            name: "categories"
+            widget: "list"
+            fields:
+              - { label: "分类名称", name: "name", widget: "string" }
+              - { label: "URL标识符", name: "slug", widget: "string", pattern: ["^[a-z0-9-]+$", "只允许小写字母、数字和连字符"] }
+              - { label: "分类图片", name: "image", widget: "image" }
+              - { label: "分类描述", name: "description", widget: "text" }
+
+  # ================= 页面配置 =================
+  - name: "pages"
+    label: "页面"
+    files:
+      - file: "site/content/_index.md"
+        label: "主页"
+        name: "home_page"
+        fields:
+          - { label: "标题", name: "title", widget: "string" }
+          - { label: "副标题", name: "subtitle", widget: "string" }
+          - { label: "头图", name: "image", widget: "image" }
+          - label: "产品列表"
+            name: "products"
+            widget: "list"
+            fields:
+              - { label: "产品图片", name: "image", widget: "image" }
+              - { label: "产品描述", name: "text", widget: "text" }
+
+      - file: "site/content/contact/_index.md"
+        label: "联系我们"
+        name: "contact_page"
+        fields:
+          - { label: "标题", name: "title", widget: "string" }
+          - { label: "Logo", name: "logo", widget: "image" }
           - { label: "联系方式", name: "contacts", widget: "list",
               fields: [
                 { label: "类型", name: "type", widget: "string" },
                 { label: "信息", name: "value", widget: "string" }
               ] }
 
-  # ================ 网站设置 ================
-  - name: "settings"
-    label: "全局设置"
+  # ================= 网站设置 =================
+  - name: "site_settings"
+    label: "网站设置"
     files:
-      - file: "site/config/site.json"
-        label: "基础配置"
-        name: "site_settings"  # 唯一标识
-        fields:
-          - { label: "网站标题", name: "title", widget: "string" }
-          - { label: "SEO描述", name: "description", widget: "text" }
-
-      - file: "site/config/footer.json"
+      - file: "site/data/footer.json"
         label: "页脚配置"
-        name: "footer_settings"  # 唯一标识
+        name: "footer_settings"
         fields:
           - { label: "版权信息", name: "copyright", widget: "string" }
           - { label: "备案号", name: "icp", widget: "string" }
