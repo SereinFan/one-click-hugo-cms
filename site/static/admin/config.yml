@@ -50,23 +50,18 @@ collections:
     files:
       - file: "site/content/categories/_index.md"
         label: "产品分类页面"
-        name: "categories_config"
+        name: "categories"
         fields:
-          - { label: "页面标题", name: "title", widget: "string" }
-          - { label: "顶部背景图", name: "image", widget: "image" }
-          - { label: "产品简介", name: "product_intro", widget: "string" }
+          - {label: "页面标题", name: "title", widget: "string"}
+          - {label: "顶部背景图", name: "image", widget: "image"}
+          - {label: "产品简介", name: "product_intro", widget: "string"}
           - label: "分类列表"
-            name: "categories"
+            name: "categories_list"
             widget: "list"
             fields:
-              - { label: "分类名称", name: "name", widget: "string" }
-              - { label: "URL标识符", 
-                  name: "slug", 
-                  widget: "string",
-                  pattern: ["^[a-z0-9-]+$", "只允许小写字母、数字和连字符"] }
-              - { label: "分类图片", name: "image", widget: "image" }
-              - { label: "分类描述", name: "description", widget: "text" }
-
+              - {label: "分类名称", name: "name", widget: "string"}
+              - {label: "分类图片", name: "image", widget: "image"}
+              - {label: "分类描述", name: "description", widget: "text"}
   # ================= 页面配置 =================
   - name: "pages"
     label: "页面"
