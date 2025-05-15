@@ -20,6 +20,7 @@ collections:
         name: "categories"
         widget: "select"
         multiple: true
+        options: "/.netlify/functions/get-categories"
         collection: "categories"
         value_field: "slug"
         display_fields: ["name"]
