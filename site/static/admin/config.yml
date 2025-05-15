@@ -16,7 +16,15 @@ collections:
     public_folder: "/img"
     fields:
       - { label: "标题", name: "title", widget: "string" }
-      - { label: "分类", name: "categories", widget: "categories" } # 使用自定义 widget
+      - label: "分类"
+        name: "categories"
+        widget: "categories" 
+        # 必须添加options配置
+        options: 
+          collection: "categories"  # 对应分类集合
+          value_field: "name"       # 对应分类名称字段
+          search_fields: ["name"] 
+          display_fields: ["name"]
       - { label: "简介", name: "description", widget: "text" }
       - { label: "图片", name: "image", widget: "image", required: false }
       - { label: "内容", name: "body", widget: "markdown" }
@@ -135,4 +143,5 @@ collections:
                 field: { label: "图片", name: "image", widget: "image" }
 
 scripts:
+  - https://unpkg.com/netlify-cms@latest/dist/netlify-cms.js
   - /admin/js/category-widget.js
