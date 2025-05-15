@@ -20,7 +20,11 @@ collections:
         name: "categories"
         widget: "select"
         multiple: true  # 启用多选
-        options: "/.netlify/functions/get-categories"  # 使用你的函数
+        options:
+          # 硬编码示例选项
+          - { label: "默认分类", value: "default" }
+          # 动态加载选项
+          - { label: "全部产品分类", options: "/.netlify/functions/get-categories" }
       - { label: "简介", name: "description", widget: "text" }
       - { label: "图片", name: "image", widget: "image", required: false }
       - { label: "内容", name: "body", widget: "markdown" }
