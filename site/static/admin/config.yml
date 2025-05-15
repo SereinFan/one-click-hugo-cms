@@ -48,7 +48,7 @@ collections:
           - {label: "顶部背景图", name: "image", widget: "image"}
           - {label: "产品简介", name: "product_intro", widget: "string"}
           - label: "分类列表"
-            name: "categories"
+            name: "categories_list"
             widget: "list"
             fields:
               - {label: "分类名称", name: "name", widget: "string"}
