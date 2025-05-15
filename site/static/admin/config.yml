@@ -16,11 +16,7 @@ collections:
     public_folder: "/img"
     fields:
       - { label: "标题", name: "title", widget: "string" }
-      - label: "分类"
-        name: "categories"
-        widget: "select"
-        multiple: true
-        options: "{{ dynamic_get_categories }}"
+      - { label: "分类", name: "categories", widget: "categories" }# 使用自定义 widget
       - { label: "简介", name: "description", widget: "text" }
       - { label: "图片", name: "image", widget: "image", required: false }
       - { label: "内容", name: "body", widget: "markdown" }
