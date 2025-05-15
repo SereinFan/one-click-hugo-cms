@@ -135,4 +135,4 @@ collections:
                 field: { label: "图片", name: "image", widget: "image" }
 
 scripts:
-  - ./admin/js/category-widget.js
+  - /admin/js/category-widget.js
