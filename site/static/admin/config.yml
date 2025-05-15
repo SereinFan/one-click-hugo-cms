@@ -134,5 +134,58 @@ collections:
                 widget: "list"
                 field: { label: "图片", name: "image", widget: "image" }
 
-scripts:
-  - ../../../static/admin/js/category-widget.js
+#scripts:
+  #- ../static/admin/js/category-widget.js
+inline_script: |
+  import { h } from 'preact';
+  import { CMS } from 'netlify-cms-app';
+  import { useState, useEffect } from 'preact/hooks';
+
+  const CategoriesControl = ({ value, onChange }) => {
+    const [categories, setCategories] = useState([]);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+      fetch('/.netlify/functions/get-categories')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          return response.json();
+        })
+        .then(data => {
+          if (Array.isArray(data) && data.every(item => item.label && item.value)) {
+            setCategories(data);
+          } else {
+            throw new Error('Invalid data format. Expected an array of objects with `label` and `value`.');
+          }
+        })
+        .catch(error => {
+          console.error('Error fetching categories:', error);
+          setError(error.message);
+        });
+    }, []);
+
+    return (
+      <div>
+        {error ? (
+          <p style={{ color: 'red' }}>Error loading categories: {error}</p>
+        ) : (
+          <select
+            value={value || ''}
+            onChange={e => onChange(e.target.value)}
+          >
+            <option value="">请选择分类</option>
+            {categories.map(category => (
+              <option key={category.value} value={category.value}>
+                {category.label}
+              </option>
+            ))}
+          </select>
+        )}
+      </div>
+    );
+  };
+
+  CMS.registerWidget('categories', CategoriesControl);
+  console.log('Categories widget registered successfully.');
