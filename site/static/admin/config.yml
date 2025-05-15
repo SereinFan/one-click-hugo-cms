@@ -16,14 +16,7 @@ collections:
     public_folder: "/img"
     fields:
       - { label: "标题", name: "title", widget: "string" }
-      - label: "分类"
-        name: "categories"
-        widget: "relation" 
-        collection: "categories"  # 对应分类集合
-        searchFields: ["name"]    # 搜索字段
-        valueField: "value"       # 对应分类的value字段 
-        displayFields: ["name"]   # 显示字段
-        required: false
+      - {label: "分类", name: "categories", widget: "categories", multiple: true}
       - { label: "简介", name: "description", widget: "text" }
       - { label: "图片", name: "image", widget: "image", required: false }
       - { label: "内容", name: "body", widget: "markdown" }
@@ -44,7 +37,7 @@ collections:
       - { label: "内容", name: "body", widget: "markdown" }
 
   # ================= 分类配置（已修正） =================
-  - name: "categories"
+  - name: "product_categories"
     label: "产品分类"
     files:
       - file: "site/content/categories/_index.md"
