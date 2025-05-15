@@ -21,7 +21,7 @@ collections:
         widget: "relation"
         collection: "product_categories"  # 指向你的分类集合
         searchFields: ["name"]    # 搜索字段
-        valueField: "value"       # 对应分类的value字段
+        valueField: "slug"       # 对应分类的value字段
         displayFields: ["name"]   # 显示字段
         required: false
       - { label: "简介", name: "description", widget: "text" }
