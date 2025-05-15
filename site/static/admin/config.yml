@@ -15,35 +15,23 @@ collections:
     media_folder: "../../../static/img"
     public_folder: "/img"
     fields:
-      - label: "标题"
-        name: "title"
-        widget: "string"  # 统一使用展开格式
-    
+      - { label: "标题", name: "title", widget: "string" }
       - label: "分类"
         name: "categories"
         widget: "select"
         multiple: true
         options:
-          source:
-            url: "/.netlify/functions/get-categories"
-            value_field: "value"
-            label_field: "label"
-          default:
-            - label: "默认分类"
-              value: "default"
-    
-      - label: "简介"
-        name: "description"
-        widget: "text"
-    
-      - label: "图片"
-        name: "image"
-        widget: "image"
-        required: false
-    
-      - label: "内容"
-        name: "body"
-        widget: "markdown"
+        # 正确动态加载配置
+          - source:
+              url: "/.netlify/functions/get-categories"
+              value_field: "value"  # 必须对应API返回字段
+              label_field: "label"  # 必须对应API返回字段
+            default:  # 默认选项配置
+              - label: "默认分类"
+                value: "default"
+      - { label: "简介", name: "description", widget: "text" }
+      - { label: "图片", name: "image", widget: "image", required: false }
+      - { label: "内容", name: "body", widget: "markdown" }
   # ================= 博客集合 ================= 
   - name: "product_blog"
     label: "博客"
