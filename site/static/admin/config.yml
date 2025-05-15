@@ -19,7 +19,7 @@ collections:
       - label: "分类"
         name: "categories"
         widget: "relation"
-        collection: "categories"  # 指向你的分类集合
+        collection: "product_categories"  # 指向你的分类集合
         searchFields: ["name"]    # 搜索字段
         valueField: "value"       # 对应分类的value字段
         displayFields: ["name"]   # 显示字段
