@@ -18,13 +18,12 @@ collections:
       - { label: "标题", name: "title", widget: "string" }
       - label: "分类"
         name: "categories"
-        widget: "categories" 
-        # 必须添加options配置
-        options: 
-          collection: "categories"  # 对应分类集合
-          value_field: "name"       # 对应分类名称字段
-          search_fields: ["name"] 
-          display_fields: ["name"]
+        widget: "relation" 
+        collection: "categories"  # 对应分类集合
+        searchFields: ["name"]    # 搜索字段
+        valueField: "value"       # 对应分类的value字段 
+        displayFields: ["name"]   # 显示字段
+        required: false
       - { label: "简介", name: "description", widget: "text" }
       - { label: "图片", name: "image", widget: "image", required: false }
       - { label: "内容", name: "body", widget: "markdown" }
