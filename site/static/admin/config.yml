@@ -20,7 +20,14 @@ collections:
         name: "categories"
         widget: "select"
         multiple: true
-        options: "/.netlify/functions/get-categories"
+        options:
+        # 使用动态数据加载配置
+        source:
+          url: "/.netlify/functions/get-categories"
+          # 数据格式转换配置
+          value_field: "value"  # 对应API返回的value字段
+          label_field: "label"  # 对应API返回的label字段
+        # 添加默认选项保障稳定性
         collection: "categories"
         value_field: "slug"
         display_fields: ["name"]
