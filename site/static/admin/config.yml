@@ -18,12 +18,9 @@ collections:
       - { label: "标题", name: "title", widget: "string" }
       - label: "分类"
         name: "categories"
-        widget: "relation"
-        collection: "product_categories"  # 指向你的分类集合
-        searchFields: ["name"]    # 搜索字段
-        valueField: "name"       # 对应分类的value字段
-        displayFields: ["name"]   # 显示字段
-        required: false
+        widget: "select"
+        multiple: true  # 启用多选
+        options: "/.netlify/functions/get-categories"  # 使用你的函数
       - { label: "简介", name: "description", widget: "text" }
       - { label: "图片", name: "image", widget: "image", required: false }
       - { label: "内容", name: "body", widget: "markdown" }
