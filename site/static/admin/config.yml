@@ -20,15 +20,7 @@ collections:
         name: "categories"
         widget: "select"
         multiple: true
-        options:
-        # 正确动态加载配置
-          - source:
-              url: "/.netlify/functions/get-categories"
-              value_field: "value"  # 必须对应API返回字段
-              label_field: "label"  # 必须对应API返回字段
-            default:  # 默认选项配置
-              - label: "默认分类"
-                value: "default"
+        options: "{{ dynamic_get_categories }}"
       - { label: "简介", name: "description", widget: "text" }
       - { label: "图片", name: "image", widget: "image", required: false }
       - { label: "内容", name: "body", widget: "markdown" }
