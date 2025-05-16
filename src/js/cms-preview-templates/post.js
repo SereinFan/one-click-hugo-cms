@@ -10,7 +10,10 @@ export default class PostPreview extends React.Component {
     const description = entry.getIn(["data", "description"]) || "No description available.";
     const date = entry.getIn(["data", "date"]) ? format(entry.getIn(["data", "date"]), "iii, MMM d, yyyy") : "No date";
     const image = entry.getIn(["data", "image"]) ? getAsset(entry.getIn(["data", "image"])) : null;
-    const categories = entry.getIn(["data", "categories"]) || [];
+    const categories = entry.getIn(["data", "categories"]);
+
+    // 确保 categories 是数组
+    const safeCategories = Array.isArray(categories) ? categories : [];
 
     return (
       <div className="ph3 bg-off-white">
@@ -19,10 +22,10 @@ export default class PostPreview extends React.Component {
           <h1 className="f2 lh-title b mb3">{title}</h1>
 
           {/* 分类标签 */}
-          {categories.length > 0 ? (
+          {safeCategories.length > 0 ? (
             <div className="tags grey-3 pb3">
               <strong>Categories:</strong>
-              {categories.map((category, index) => (
+              {safeCategories.map((category, index) => (
                 <a key={index} href={`/categories/${category}`} className="link grey-3 ph2">
                   {category}
                 </a>
