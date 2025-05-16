@@ -20,13 +20,15 @@ collections:
         name: "categories"
         widget: "select"
         multiple: true  # 启用多选
-        options:
-          - label: "产品分类"
-            options:
-              - type: "dynamic"
-                url: "https://test-hohsen.netlify.app/.netlify/functions/get-categories"
-                valueField: "value"  # 对应函数返回的value字段
-                displayField: "label" # 对应函数返回的label字段
+        options: >
+          () => {
+            return fetch('https://test-hohsen.netlify.app/.netlify/functions/get-categories')
+              .then(response => response.json())
+              .then(data => data.map(category => ({
+                label: category.label,
+                value: category.value
+              })));
+          }
       - { label: "简介", name: "description", widget: "text" }
       - { label: "图片", name: "image", widget: "image", required: false }
       - { label: "内容", name: "body", widget: "markdown" }
