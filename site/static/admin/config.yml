@@ -22,12 +22,9 @@ collections:
         multiple: true  # 启用多选
         options: >
           () => {
-            return fetch('https://test-hohsen.netlify.app/.netlify/functions/get-categories')
+            return fetch('/.netlify/functions/get-categories')
               .then(response => response.json())
-              .then(data => data.map(category => ({
-                label: category.label,
-                value: category.value
-              })));
+              .then(data => data);
           }
       - { label: "简介", name: "description", widget: "text" }
       - { label: "图片", name: "image", widget: "image", required: false }
