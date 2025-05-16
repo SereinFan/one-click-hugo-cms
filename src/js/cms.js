@@ -12,9 +12,10 @@ import ContactPreview from "./cms-preview-templates/contact";
 import FooterPreview from "./cms-preview-templates/footer";
 
 // 动态加载分类数据
-fetch("/categories.json")
+fetch("/.netlify/functions/get-categories")
   .then((response) => response.json())
   .then((categories) => {
+    console.log("Loaded categories:", categories);
     // 注册分类字段
     CMS.registerWidget("categories", "select", {
       options: categories.map((category) => ({
@@ -33,4 +34,6 @@ fetch("/categories.json")
     CMS.registerPreviewTemplate("footer", FooterPreview);
     CMS.init();
   })
-  .catch((error) => console.error("Error loading categories:", error));
+  .catch((error) => {
+    console.error("Error loading categories:", error);
+  });
