@@ -23,7 +23,8 @@ collections:
         options:
           - label: "产品分类"
             options:
-              - url: "https://test-hohsen.netlify.app/.netlify/functions/get-categories"
+              - type: "dynamic"
+                url: "https://test-hohsen.netlify.app/.netlify/functions/get-categories"
                 valueField: "value"  # 对应函数返回的value字段
                 displayField: "label" # 对应函数返回的label字段
       - { label: "简介", name: "description", widget: "text" }
