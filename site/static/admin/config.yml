@@ -22,11 +22,11 @@ collections:
         multiple: true  # 启用多选
         options:
         # 静态选项（示例）
-        - { label: "默认分类", value: "default" }
+          - { label: "默认分类", value: "default" }
         # 动态选项配置（关键修正点）
-        - label: "动态分类"
-          options:
-            - url: "https://test-hohsen.netlify.app/.netlify/functions/get-categories"
+          - label: "动态分类"
+            options:
+              url: "https://test-hohsen.netlify.app/.netlify/functions/get-categories"
               value_field: "value"  # 对应函数返回的value字段
               display_field: "label" # 对应函数返回的label字段
     - { label: "简介", name: "description", widget: "text" }
