@@ -21,13 +21,17 @@ collections:
         widget: "select"
         multiple: true  # 启用多选
         options:
-          # 硬编码示例选项
-          - { label: "默认分类", value: "default" }
-          # 动态加载选项
-          - { label: "全部产品分类", options: "/.netlify/functions/get-categories" }
-      - { label: "简介", name: "description", widget: "text" }
-      - { label: "图片", name: "image", widget: "image", required: false }
-      - { label: "内容", name: "body", widget: "markdown" }
+        # 静态选项（示例）
+        - { label: "默认分类", value: "default" }
+        # 动态选项配置（关键修正点）
+        - label: "动态分类"
+          options:
+            - url: "https://test-hohsen.netlify.app/.netlify/functions/get-categories"
+              value_field: "value"  # 对应函数返回的value字段
+              display_field: "label" # 对应函数返回的label字段
+    - { label: "简介", name: "description", widget: "text" }
+    - { label: "图片", name: "image", widget: "image", required: false }
+    - { label: "内容", name: "body", widget: "markdown" }
   # ================= 博客集合 ================= 
   - name: "product_blog"
     label: "博客"
