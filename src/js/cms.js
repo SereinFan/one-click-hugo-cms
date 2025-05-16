@@ -11,11 +11,26 @@ import ValuesPreview from "./cms-preview-templates/values";
 import ContactPreview from "./cms-preview-templates/contact";
 import FooterPreview from "./cms-preview-templates/footer";
 
-CMS.registerPreviewStyle(styles, {raw: true});
-CMS.registerPreviewTemplate("home", HomePreview);
-CMS.registerPreviewTemplate("post", PostPreview);
-CMS.registerPreviewTemplate("products", ProductsPreview);
-CMS.registerPreviewTemplate("values", ValuesPreview);
-CMS.registerPreviewTemplate("contact", ContactPreview);
-CMS.registerPreviewTemplate("footer", FooterPreview);
-CMS.init();
+// 动态加载分类数据
+fetch("/categories.json")
+  .then((response) => response.json())
+  .then((categories) => {
+    // 注册分类字段
+    CMS.registerWidget("categories", "select", {
+      options: categories.map((category) => ({
+        label: category,
+        value: category,
+      })),
+    });
+
+    // 初始化 CMS
+    CMS.registerPreviewStyle(styles, { raw: true });
+    CMS.registerPreviewTemplate("home", HomePreview);
+    CMS.registerPreviewTemplate("post", PostPreview);
+    CMS.registerPreviewTemplate("products", ProductsPreview);
+    CMS.registerPreviewTemplate("values", ValuesPreview);
+    CMS.registerPreviewTemplate("contact", ContactPreview);
+    CMS.registerPreviewTemplate("footer", FooterPreview);
+    CMS.init();
+  })
+  .catch((error) => console.error("Error loading categories:", error));
