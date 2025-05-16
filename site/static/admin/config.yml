@@ -24,9 +24,9 @@ collections:
           - url: "https://test-hohsen.netlify.app/.netlify/functions/get-categories"
             value_field: "value"  # 对应函数返回的value字段
             display_field: "label" # 对应函数返回的label字段
-    - { label: "简介", name: "description", widget: "text" }
-    - { label: "图片", name: "image", widget: "image", required: false }
-    - { label: "内容", name: "body", widget: "markdown" }
+      - { label: "简介", name: "description", widget: "text" }
+      - { label: "图片", name: "image", widget: "image", required: false }
+      - { label: "内容", name: "body", widget: "markdown" }
   # ================= 博客集合 ================= 
   - name: "product_blog"
     label: "博客"
