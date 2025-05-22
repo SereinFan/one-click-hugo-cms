@@ -3,9 +3,9 @@
   YARN_VERSION = "1.22.17"
 
 [build]
-  command = "cd site/netlify/functions/get-categories && npm install && cd ../../../ && yarn build"
+  command = "yarn build"
   publish = "dist"
-  functions = "site/netlify/functions"
+  functions = "netlify/functions"
 
 [context.deploy-preview]
   command = "yarn build:preview"
