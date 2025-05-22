@@ -16,7 +16,7 @@ collections:
     public_folder: "/img"
     fields:
       - { label: "标题", name: "title", widget: "string" }
-      - { name: "categories", label: "分类", widget: "categories", multiple: true}
+      - { name: "categories", label: "分类", widget: "select", multiple: true, options: [ { label: "电池部件与材料", value: "battery-components" }, { label: "研发与测试设备", value: "testing-equipment" } ] }
       - { label: "简介", name: "description", widget: "text" }
       - { label: "图片", name: "image", widget: "image", required: false }
       - { label: "内容", name: "body", widget: "markdown" }
